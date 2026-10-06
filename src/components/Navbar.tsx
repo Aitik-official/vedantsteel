@@ -81,9 +81,9 @@ export default function Navbar() {
 
   const solidNav = !isHome || pastHero || open;
   const linkBase = solidNav
-    ? "text-[#444] hover:text-industrial-steel"
-    : "text-white/80 hover:text-white";
-  const linkActive = solidNav ? "text-industrial-ink" : "text-white";
+    ? "text-[#333] hover:text-industrial-steel"
+    : "text-white/85 hover:text-white";
+  const linkActive = solidNav ? "text-industrial-steel font-bold" : "text-white font-bold";
 
   const headerClass = `fixed inset-x-0 top-0 ${
     solidNav

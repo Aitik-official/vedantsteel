@@ -6,7 +6,7 @@ import AboutPageContent from "@/components/AboutPage";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Kredence Steel Trading supplies fencing systems and coated metal products for construction and industrial projects.",
+    "Vedant Steel Corporation supplies fencing systems and coated metal products for construction and industrial projects.",
 };
 
 export default function AboutPage() {

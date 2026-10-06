@@ -69,8 +69,8 @@ export default function ContactForm() {
             Connect with us
           </h1>
           <p className="mt-4 max-w-md text-[14px] leading-relaxed text-white/70 sm:mt-5 sm:text-[15px]">
-            Tell us the fence or metal product and quantity. Kredence Steel
-            Trading will confirm availability.
+            Tell us the fence or metal product and quantity. Vedant Steel
+            Corporation will confirm availability.
           </p>
           <div className="mt-8 space-y-5 text-[14px] sm:mt-10 sm:space-y-6">
             <div>

@@ -144,11 +144,11 @@ export default function ServicesHub() {
                           {String(i + 1).padStart(2, "0")}
                         </span>
 
-                        <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#006dc2_0%,#03abab_55%,#4ea32a_100%)] text-white shadow-[0_10px_24px_rgba(3,171,171,0.28)]">
+                        <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#fc5220_0%,#ff6536_100%)] text-white shadow-[0_10px_24px_rgba(252,82,32,0.28)]">
                           <Icon className="h-5 w-5" strokeWidth={1.8} />
                         </span>
 
-                        <h3 className="mb-2 text-xl font-bold text-[#1A2432]">
+                        <h3 className="mb-2 text-xl font-bold text-industrial-ink">
                           {item.title}
                         </h3>
                         <p className="mb-5 text-[14px] leading-relaxed text-[#666]">
@@ -156,10 +156,10 @@ export default function ServicesHub() {
                         </p>
 
                         <div className="mt-auto flex items-center justify-between gap-3 border-t border-[#eef2f7] pt-4">
-                          <span className="h-1 w-10 rounded-full bg-gradient-to-r from-ems-blue via-ems-cyan to-ems-green" />
+                          <span className="h-1 w-10 rounded-full bg-gradient-to-r from-industrial-steel to-industrial-steel-light" />
                           <Link
                             href="/contact"
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-ems-navy transition group-hover:text-ems-cyan"
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-industrial-ink transition group-hover:text-industrial-steel"
                           >
                             Enquire
                             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
@@ -189,10 +189,10 @@ export default function ServicesHub() {
               />
             </div>
             <div className="p-6 sm:p-8 lg:p-10">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-ems-cyan">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-industrial-steel">
                 {rental.eyebrow}
               </p>
-              <h2 className="mb-4 text-2xl font-bold text-[#1A2432] sm:text-3xl">
+              <h2 className="mb-4 text-2xl font-bold text-industrial-ink sm:text-3xl">
                 {rental.title}
               </h2>
               <p className="mb-6 text-[15px] leading-relaxed text-[#666]">
@@ -200,7 +200,7 @@ export default function ServicesHub() {
               </p>
               <ul className="mb-8 space-y-3">
                 {growth.features.map((f) => (
-                  <li key={f.title} className="text-sm text-[#1A2432]">
+                  <li key={f.title} className="text-sm text-industrial-ink">
                     <span className="font-semibold">{f.title}:</span>{" "}
                     <span className="text-[#666]">{f.description}</span>
                   </li>
@@ -214,10 +214,10 @@ export default function ServicesHub() {
         {tab === "supply" ? (
           <div key="supply">
             <Reveal className="mb-8 max-w-2xl">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-ems-cyan">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-industrial-steel">
                 {supplyIntro.eyebrow}
               </p>
-              <h2 className="mb-3 text-2xl font-bold text-[#1A2432] sm:text-3xl">
+              <h2 className="mb-3 text-2xl font-bold text-industrial-ink sm:text-3xl">
                 {supplyIntro.title}
               </h2>
               <p className="text-[15px] leading-relaxed text-[#666]">
@@ -232,11 +232,11 @@ export default function ServicesHub() {
 
         <Reveal
           delay={150}
-          className="mt-10 overflow-hidden rounded-2xl bg-[linear-gradient(105deg,#011552_0%,#006dc2_55%,#03abab_100%)] px-5 py-7 sm:mt-14 sm:px-8 sm:py-10"
+          className="mt-10 overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#121c22_0%,#1c2b33_55%,#263a45_100%)] px-5 py-7 sm:mt-14 sm:px-8 sm:py-10 border border-white/10"
         >
           <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
             <div>
-              <p className="mb-1 text-xs font-bold uppercase tracking-[0.16em] text-ems-green">
+              <p className="mb-1 text-xs font-bold uppercase tracking-[0.16em] text-industrial-steel">
                 Ready to start
               </p>
               <p className="max-w-md text-lg font-semibold text-white sm:text-xl">
@@ -245,9 +245,9 @@ export default function ServicesHub() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex w-full items-center justify-center rounded-md bg-white px-7 py-3.5 text-sm font-bold text-ems-navy transition hover:bg-ems-soft sm:w-auto"
+              className="inline-flex w-full items-center justify-center rounded-md bg-white px-7 py-3.5 text-sm font-bold text-industrial-ink transition hover:bg-industrial-steel hover:text-white sm:w-auto"
             >
-              Contact Kredence Steel
+              Contact Vedant Steel
             </Link>
           </div>
         </Reveal>

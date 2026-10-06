@@ -126,14 +126,14 @@ export default function HomeContact() {
   return (
     <section
       id="connect"
-      className="relative z-10 flex flex-col bg-industrial-mist text-industrial-ink shadow-[0_-28px_50px_rgba(23,50,61,0.12)]"
+      className="relative z-10 flex flex-col bg-industrial-mist text-industrial-ink shadow-[0_-28px_50px_rgba(18,28,34,0.08)]"
     >
       <div className="mx-auto grid h-fit w-full max-w-[90rem] items-start gap-6 px-6 py-14 sm:px-10 sm:py-16 lg:grid-cols-[minmax(16rem,22rem)_minmax(0,1fr)] lg:gap-8 lg:px-14 lg:py-20">
         <div className="flex h-full flex-col gap-4">
           {cards.map((card) => {
             const Icon = card.icon;
             const className =
-              "logo-grad group relative flex flex-col justify-center overflow-hidden px-6 py-6 text-white shadow-[0_14px_32px_rgba(23,50,61,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(23,50,61,0.28)]";
+              "logo-grad group relative flex flex-col justify-center overflow-hidden px-6 py-6 text-white shadow-[0_14px_32px_rgba(252,82,32,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(252,82,32,0.25)]";
             const body = (
               <>
                 <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,transparent_46%)]" />
@@ -317,7 +317,7 @@ export default function HomeContact() {
           {/* Interactive Map with Center Red Pin & Floating Card */}
           <div className="relative h-[380px] w-full sm:h-[440px] lg:h-[480px]">
             <iframe
-              title="Kredence Steel Trading Location Map"
+              title="Vedant Steel Corporation Location Map"
               src="https://maps.google.com/maps?q=Dubai%2C%20United%20Arab%20Emirates&t=&z=13&ie=UTF8&iwloc=&output=embed"
               className="h-full w-full border-0"
               loading="lazy"
@@ -341,7 +341,7 @@ export default function HomeContact() {
               {/* Location Badge */}
               <div className="mt-1.5 flex items-center gap-1.5 rounded-full border border-white/40 bg-industrial-dark/95 px-3 py-1 text-[11px] font-semibold tracking-wide text-white shadow-xl backdrop-blur-xs">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
-                <span>Kredence Steel Trading</span>
+                <span>Vedant Steel Corporation</span>
               </div>
             </div>
 

@@ -7,7 +7,7 @@ import HomeContact from "@/components/HomeContact";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Kredence Steel Trading for fencing panels, hoardings, mesh fence, coils, sheets, and roofing metals.",
+    "Contact Vedant Steel Corporation for fencing panels, hoardings, mesh fence, coils, sheets, and roofing metals.",
 };
 
 export default function ContactPage() {

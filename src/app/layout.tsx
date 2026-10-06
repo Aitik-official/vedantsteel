@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   description: site.description,
   icons: {
-    icon: [{ url: "/logo/krednce-favicon.jpeg", type: "image/jpeg" }],
-    apple: [{ url: "/logo/krednce-favicon.jpeg", type: "image/jpeg" }],
-    shortcut: "/logo/krednce-favicon.jpeg",
+    icon: [{ url: "/logo/vedant-favicon.jpeg", type: "image/jpeg" }],
+    apple: [{ url: "/logo/vedant-favicon.jpeg", type: "image/jpeg" }],
+    shortcut: "/logo/vedant-favicon.jpeg",
   },
 };
 

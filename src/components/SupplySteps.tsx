@@ -11,7 +11,7 @@ const steps = [
   {
     title: "We confirm availability",
     description:
-      "Kredence Steel Trading checks the range — panels, mesh, coils, sheets, purlins, or roofing accessories — and replies with what can be supplied.",
+      "Vedant Steel Corporation checks the range — panels, mesh, coils, sheets, purlins, or roofing accessories — and replies with what can be supplied.",
   },
   {
     title: "Supply to the project",

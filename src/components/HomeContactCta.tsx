@@ -7,11 +7,11 @@ import { site } from "@/data/site";
 export default function HomeContactCta() {
   return (
     <section className="relative overflow-hidden bg-industrial-dark text-white">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(36,86,112,0.3)_0%,rgba(23,50,61,0.95)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(252,82,32,0.15)_0%,rgba(18,28,34,0.96)_100%)]" />
       <div className="relative mx-auto w-full max-w-[90rem] px-6 py-8 sm:px-10 sm:py-10 lg:px-14 lg:py-12">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
           <Reveal className="max-w-2xl">
-            <p className="mb-2 inline-flex items-center gap-2 text-[10.5px] font-medium uppercase tracking-[0.28em] text-industrial-steel-light sm:mb-2.5 sm:gap-2 sm:text-[11px]">
+            <p className="mb-2 inline-flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.28em] text-industrial-steel sm:mb-2.5 sm:gap-2 sm:text-[11px]">
               <BrandMark className="h-3 w-3 sm:h-3.5 sm:w-3.5" color="currentColor" />
               Get in Touch
             </p>

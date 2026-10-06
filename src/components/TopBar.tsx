@@ -10,13 +10,13 @@ export default function TopBar() {
         <div className="flex min-w-0 items-center gap-3 sm:gap-5">
           <a
             href={`mailto:${site.email}`}
-            className="inline-flex min-w-0 max-w-[58vw] items-center gap-1.5 opacity-95 transition hover:opacity-100 sm:max-w-none sm:gap-2"
+            className="inline-flex min-w-0 max-w-[58vw] items-center gap-1.5 opacity-95 transition hover:text-industrial-steel-light sm:max-w-none sm:gap-2"
           >
-            <Mail className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
+            <Mail className="h-3 w-3 shrink-0 text-industrial-steel sm:h-3.5 sm:w-3.5" />
             <span className="truncate">{site.email}</span>
           </a>
           <span className="hidden items-center gap-2 opacity-95 md:inline-flex">
-            <Clock className="h-3.5 w-3.5 shrink-0" />
+            <Clock className="h-3.5 w-3.5 shrink-0 text-industrial-steel" />
             {site.hoursShort}
           </span>
         </div>
@@ -25,9 +25,9 @@ export default function TopBar() {
         <div className="flex shrink-0 items-center gap-3 sm:gap-5">
           <a
             href={site.phoneHref}
-            className="inline-flex items-center gap-1.5 opacity-95 transition hover:opacity-100 sm:gap-2"
+            className="inline-flex items-center gap-1.5 opacity-95 transition hover:text-industrial-steel-light sm:gap-2"
           >
-            <Phone className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
+            <Phone className="h-3 w-3 shrink-0 text-industrial-steel sm:h-3.5 sm:w-3.5" />
             <span className="sm:hidden">Call</span>
             <span className="hidden sm:inline">{site.phone}</span>
           </a>
@@ -35,16 +35,16 @@ export default function TopBar() {
             href={site.address.maps}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-2 opacity-95 transition hover:opacity-100 sm:inline-flex"
+            className="hidden items-center gap-2 opacity-95 transition hover:text-industrial-steel-light sm:inline-flex"
           >
-            <MapPin className="h-3.5 w-3.5 shrink-0" />
+            <MapPin className="h-3.5 w-3.5 shrink-0 text-industrial-steel" />
             Dubai, UAE
           </a>
           <Link
             href="/contact"
-            className="hidden text-[12px] font-semibold uppercase tracking-[0.14em] text-ems-cyan transition hover:text-white md:inline"
+            className="hidden text-[12px] font-bold uppercase tracking-[0.14em] text-industrial-steel transition hover:text-white md:inline"
           >
-            Get a Quote
+            Get a Quote →
           </Link>
         </div>
       </div>

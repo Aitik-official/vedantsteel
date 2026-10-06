@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Blogs",
   description:
-    "Notes from Kredence Steel Trading on fencing systems, coated metals, coils, sheets, and site supply.",
+    "Notes from Vedant Steel Corporation on fencing systems, coated metals, coils, sheets, and site supply.",
 };
 
 function formatDate(value: string) {

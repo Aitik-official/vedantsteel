@@ -1,10 +1,10 @@
 import { createHmac, timingSafeEqual } from "crypto";
 
-const COOKIE = "kredence_blog_admin";
-const SECRET = process.env.BLOG_DASHBOARD_SECRET || "kredence-blog-dashboard";
+const COOKIE = "vedant_blog_admin";
+const SECRET = process.env.BLOG_DASHBOARD_SECRET || "vedant-blog-dashboard";
 
 export const DASHBOARD_PASSWORD =
-  process.env.BLOG_DASHBOARD_PASSWORD || "kredence-steel";
+  process.env.BLOG_DASHBOARD_PASSWORD || "vedant-steel";
 
 export function adminCookieName() {
   return COOKIE;

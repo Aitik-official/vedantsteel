@@ -1,46 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  /* EMS logo palette */
-  --ems-navy: #011552;
-  --ems-navy-soft: #0a2a6b;
-  --ems-blue: #006dc2;
-  --ems-cyan: #03abab;
-  --ems-green: #4ea32a;
-  --ems-muted: #5a6f8f;
-  --ems-line: #d5e2f0;
-  --ems-soft: #eef6fb;
-  --ems-soft-strong: #dceef8;
-  --ems-grad: linear-gradient(90deg, #006dc2 0%, #03abab 52%, #4ea32a 100%);
+  /* Metary Theme Palette */
+  --ems-navy: #121c22;
+  --ems-navy-soft: #1a2830;
+  --ems-blue: #fc5220;
+  --ems-cyan: #ff6b3d;
+  --ems-green: #e04010;
+  --ems-muted: #556873;
+  --ems-line: #e2e7ea;
+  --ems-soft: #fff2ee;
+  --ems-soft-strong: #ffe2d9;
+  --ems-grad: linear-gradient(90deg, #fc5220 0%, #ff6b3d 52%, #e04010 100%);
 
-  /* Logo steel palette, in a few shades. */
-  --industrial-red: #2f6486;
-  --industrial-red-dark: #234c66;
-  --industrial-ink: #3a4348;
-  --industrial-muted: #6b757a;
-  --industrial-line: #e1e6e8;
-  --industrial-soft: #f3f5f6;
-  --industrial-panel: #e7ebed;
-  --industrial-dark: #17323d;
-  --industrial-steel: #3b6e8e;
-  --industrial-steel-dark: #245670;
-  --industrial-steel-light: #6e9bb4;
-  --industrial-mist: #f3f6f8;
-  --industrial-blue: #e4f0f6;
-  --industrial-slate: #d3e3ec;
-  --industrial-footer: #c5d6e0;
-  --industrial-footer-bar: #b4c9d5;
+  /* Metary Industrial Palette */
+  --industrial-red: #fc5220;
+  --industrial-red-dark: #e04010;
+  --industrial-ink: #121c22;
+  --industrial-muted: #556873;
+  --industrial-line: #e2e7ea;
+  --industrial-soft: #f8fafb;
+  --industrial-panel: #edf2f5;
+  --industrial-dark: #121c22;
+  --industrial-steel: #fc5220;
+  --industrial-steel-dark: #e04010;
+  --industrial-steel-light: #ff7a52;
+  --industrial-mist: #f4f6f8;
+  --industrial-blue: #fff2ee;
+  --industrial-slate: #ffe6dd;
+  --industrial-footer: #121c22;
+  --industrial-footer-bar: #0c1317;
 
-  /* Keep existing class names; accents follow the logo steel. */
-  --finbiz-red: #3b6e8e;
-  --finbiz-red-dark: #245670;
-  --finbiz-navy: #1c2529;
-  --finbiz-navy-soft: #243033;
-  --finbiz-gray: #6b757a;
-  --finbiz-muted: #f3f5f6;
-  --finbiz-pink: #fdeeee;
+  /* Theme Accents */
+  --finbiz-red: #fc5220;
+  --finbiz-red-dark: #e04010;
+  --finbiz-navy: #121c22;
+  --finbiz-navy-soft: #1a2830;
+  --finbiz-gray: #556873;
+  --finbiz-muted: #f8fafb;
+  --finbiz-pink: #fff2ee;
   --background: #ffffff;
-  --foreground: #3a4348;
+  --foreground: #121c22;
 }
 
 @theme inline {
@@ -86,12 +86,12 @@
 }
 
 .logo-grad {
-  background-image: linear-gradient(145deg, #17323d 0%, #245670 46%, #3b6e8e 100%);
+  background-image: linear-gradient(135deg, #fc5220 0%, #ff6536 100%);
   color: #fff;
 }
 
 .logo-grad:hover {
-  background-image: linear-gradient(145deg, #1c4252 0%, #2c6a86 50%, #4a86aa 100%);
+  background-image: linear-gradient(135deg, #e04010 0%, #fc5220 100%);
 }
 
 html {

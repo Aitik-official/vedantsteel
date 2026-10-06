@@ -79,11 +79,11 @@ export default function About({
           {hideLabel ? null : (
             <p className="mb-3 inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-industrial-steel sm:mb-4 sm:gap-2.5">
               <BrandMark className="h-3.5 w-3.5" color="currentColor" />
-              Why Choose Kredence
+              Why Choose Vedant Steel
             </p>
           )}
           <h2 className="font-display max-w-xl text-[1.65rem] font-medium uppercase leading-[1.08] tracking-[0.02em] text-industrial-ink sm:text-[2.2rem] lg:text-[2.5rem] xl:text-[2.75rem]">
-            Why Choose KREDENCE
+            Why Choose VEDANT STEEL
           </h2>
           <p className="mt-3 max-w-xl font-serif text-[1.15rem] italic leading-snug text-industrial-ink sm:mt-4 sm:text-[1.3rem] lg:text-[1.45rem]">
             15+ Years of Experience

@@ -5,7 +5,7 @@ import ProductCatalog from "@/components/ProductCatalog";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Kredence Steel Trading — fencing panels, hoardings, mesh fence, and coated metal products including coils, sheets, purlins, and roofing.",
+    "Vedant Steel Corporation — fencing panels, hoardings, mesh fence, and coated metal products including coils, sheets, purlins, and roofing.",
 };
 
 export default function ServicesPage() {

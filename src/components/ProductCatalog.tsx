@@ -78,10 +78,10 @@ export default function ProductCatalog() {
                 key={item.id}
                 type="button"
                 onClick={() => setTab(item.id)}
-                className={`shrink-0 pb-2 text-[12px] font-medium uppercase tracking-[0.16em] sm:pb-3 ${
+                className={`shrink-0 pb-2 text-[12px] font-bold uppercase tracking-[0.16em] transition sm:pb-3 ${
                   tab === item.id
-                    ? "border-b border-industrial-steel text-industrial-ink"
-                    : "text-[#8a8a8a]"
+                    ? "border-b-2 border-industrial-steel text-industrial-steel"
+                    : "text-[#777] hover:text-industrial-steel"
                 }`}
               >
                 {item.label}

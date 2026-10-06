@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 export const reviews = [
   {
     quote:
-      "KREDENCE delivered an impeccable perimeter solution for our headquarters. Their attention to detail and ability to coordinate complex logistics kept the project on schedule and on budget.",
+      "VEDANT STEEL delivered an impeccable perimeter solution for our headquarters. Their attention to detail and ability to coordinate complex logistics kept the project on schedule and on budget.",
     name: "Anupam Kumar",
     role: "Global Facilities Director, Vertex Technologies",
   },

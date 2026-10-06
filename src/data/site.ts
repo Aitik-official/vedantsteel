@@ -1,12 +1,12 @@
 export const site = {
-  name: "Kredence Steel Trading",
-  shortName: "Kredence",
-  brandName: "Kredence Steel Trading",
-  tagline: "Steel Trading",
+  name: "Vedant Steel Corporation",
+  shortName: "Vedant Steel",
+  brandName: "Vedant Steel Corporation",
+  tagline: "Steel Corporation",
   description:
-    "Kredence Steel Trading supplies fencing systems and coated metal products for construction sites, enclosures, roofing, and industrial projects.",
-  email: "Info@kredencesteel.com",
-  enquiryEmail: "info@eraticmultisolution.com",
+    "Vedant Steel Corporation supplies fencing systems and coated metal products for construction sites, enclosures, roofing, and industrial projects.",
+  email: "Info@vedantsteel.com",
+  enquiryEmail: "info@vedantsteel.com",
   phone: "971-565686811",
   phoneHref: "tel:+971565686811",
   whatsapp: "https://wa.me/971565686811",
@@ -21,11 +21,11 @@ export const site = {
     maps: "https://share.google/QTpD6j8sHv6G5qsWu",
   },
   social: {
-    linkedin: "https://www.linkedin.com/company/kredence-steel/",
-    instagram: "https://www.instagram.com/kredencesteel",
+    linkedin: "https://www.linkedin.com/company/vedant-steel/",
+    instagram: "https://www.instagram.com/vedantsteel",
     facebook: "https://www.facebook.com/profile.php?id=61592819913045",
   },
-  logo: "/logo/krednce-logog-removebg-preview.png",
+  logo: "/logo/vedant-logo.jpeg",
   heroImage: "/image.png",
 } as const;
 
@@ -40,7 +40,6 @@ export const navItems = [
       { label: "Metals", href: "/services?tab=metals" },
     ],
   },
-  { label: "Certificates", href: "/certificates" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -115,7 +114,7 @@ export const mission = {
     {
       id: "inspection",
       label: "INSPECTION",
-      body: "Every heat of steel from Kredence Steel is checked for grade, dimension, and surface quality before it leaves our yard.",
+      body: "Every heat of steel from Vedant Steel is checked for grade, dimension, and surface quality before it leaves our yard.",
       checks: [
         "Mill Test Certificate Review",
         "Dimensional Inspection",
@@ -128,7 +127,7 @@ export const mission = {
     {
       id: "approach",
       label: "APPROACH",
-      body: "Kredence Steel Trading supplies fence systems and coated metals from one desk — panels, hoardings, mesh, coils, sheets, purlins, and roofing products.",
+      body: "Vedant Steel Corporation supplies fence systems and coated metals from one desk — panels, hoardings, mesh, coils, sheets, purlins, and roofing products.",
       checks: [
         "Ready Mill Stock",
         "Cut-to-Length Supply",
@@ -141,7 +140,7 @@ export const mission = {
     {
       id: "performance",
       label: "PERFORMANCE",
-      body: "Strength, consistency, and delivery define Kredence Steel — measurable quality from enquiry to site.",
+      body: "Strength, consistency, and delivery define Vedant Steel — measurable quality from enquiry to site.",
       checks: [
         "Certified Steel Grades",
         "Repeat Industrial Buyers",
@@ -332,7 +331,7 @@ export const journey = {
       year: "2023",
       title: "ANNUAL INDUSTRY SUCCESS",
       description:
-        "Kredence Steel began supplying certified structural steel and industrial metals to fabricators and contractors.",
+        "Vedant Steel began supplying certified structural steel and industrial metals to fabricators and contractors.",
       side: "right" as const,
     },
     {
@@ -409,7 +408,7 @@ export const stats = [
 export const about = {
   eyebrow: "Who We Are",
   watermark: "Steel",
-  title: "Kredence Steel Trading — Fence & Metals",
+  title: "Vedant Steel Corporation — Fence & Metals",
   description:
     "We supply fencing systems and coated metal products for construction sites, enclosures, roofing, and industrial buildings.",
   featureCards: [
@@ -423,7 +422,7 @@ export const about = {
   accentImage:
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
   paragraphs: [
-    "Kredence Steel supplies the metals fabricators, contractors, and manufacturers specify — structural sections, stainless grades, and flat products, checked and dispatched from one yard.",
+    "Vedant Steel supplies the metals fabricators, contractors, and manufacturers specify — structural sections, stainless grades, and flat products, checked and dispatched from one yard.",
     "From TMT and beams to plates, coils, and pipes, we match grade, size, and quantity so your shop or site is never waiting on the wrong steel.",
   ],
   points: [
@@ -603,7 +602,7 @@ export const infrastructureIntro = {
   eyebrow: "Structural Steel",
   title: "Structural Steel",
   description:
-    "TMT bars, beams, channels, and angles — mill-certified long products from Kredence Steel.",
+    "TMT bars, beams, channels, and angles — mill-certified long products from Vedant Steel.",
 } as const;
 
 export const infrastructureItems = [
@@ -663,7 +662,7 @@ export const supplyIntro = {
   eyebrow: "Sheets, Plates & Coils",
   title: "Flat & Tubular Products",
   description:
-    "Plates, sheets, coils, pipes, and processing — the metals Kredence Steel keeps ready for fabrication.",
+    "Plates, sheets, coils, pipes, and processing — the metals Vedant Steel keeps ready for fabrication.",
 } as const;
 
 export const assetCategories = [
@@ -748,7 +747,7 @@ export const assetCategories = [
     label: "Alloys & Processing",
     title: "Alloys & Processing",
     description:
-      "Special alloys plus cutting and dispatch support from the Kredence Steel yard.",
+      "Special alloys plus cutting and dispatch support from the Vedant Steel yard.",
     image:
       "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1000&q=80",
     items: [
@@ -775,7 +774,7 @@ export const clients = [
 export const testimonials = [
   {
     quote:
-      "Kredence Steel delivered certified TMT and beams on the dates we needed. Grades matched the mill certificates, and the yard team was straightforward to deal with.",
+      "Vedant Steel delivered certified TMT and beams on the dates we needed. Grades matched the mill certificates, and the yard team was straightforward to deal with.",
     name: "MARIE ESTHER",
     role: "Project Director",
     company: "Apex Structures",
@@ -795,7 +794,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Plates and coils arrived cut to our list. Kredence Steel is the metals desk we call when a fabrication job cannot wait.",
+      "Plates and coils arrived cut to our list. Vedant Steel is the metals desk we call when a fabrication job cannot wait.",
     name: "RAHUL MEHTA",
     role: "Works Manager",
     company: "Metro Fabricators",
@@ -837,7 +836,7 @@ export const homeContact = {
   eyebrow: "LET'S TALK",
   title: "CONNECT WITH US",
   description:
-    "Tell us the fence or metal product and the quantity. Call 971-565686811 or send the form. Kredence Steel Trading replies within 12 hours.",
+    "Tell us the fence or metal product and the quantity. Call 971-565686811 or send the form. Vedant Steel Corporation replies within 12 hours.",
   image:
     "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=2000&q=80",
 } as const;

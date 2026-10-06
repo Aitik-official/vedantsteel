@@ -7,7 +7,7 @@ import Testimonials from "@/components/Testimonials";
 export const metadata: Metadata = {
   title: "Clients",
   description:
-    "Fabricators, contractors, and manufacturers who buy metals and steel from Kredence Steel.",
+    "Fabricators, contractors, and manufacturers who buy metals and steel from Vedant Steel.",
 };
 
 export default function ClientsPage() {
@@ -16,8 +16,8 @@ export default function ClientsPage() {
       <HeroPin>
         <PageHero
           eyebrow="Partnerships"
-          title="Buyers who trust Kredence"
-          description="Contractors and project teams who source fencing systems and coated metals from Kredence Steel Trading."
+          title="Buyers who trust Vedant Steel"
+          description="Contractors and project teams who source fencing systems and coated metals from Vedant Steel Corporation."
           image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=80"
           cta={{ label: "Get a Quote", href: "/contact" }}
           ctaSecondary={{ label: "View Products", href: "/services" }}
