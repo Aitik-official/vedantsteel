@@ -2,9 +2,9 @@ export const site = {
   name: "Vedant Steel Corporation",
   shortName: "Vedant Steel",
   brandName: "Vedant Steel Corporation",
-  tagline: "Steel Corporation",
+  tagline: "SS Flexible Hose & Expansion Bellows Manufacturer",
   description:
-    "Vedant Steel Corporation supplies fencing systems and coated metal products for construction sites, enclosures, roofing, and industrial projects.",
+    "Vedant Steel Corporation manufactures and supplies stainless steel flexible hoses, corrugated and braided hose pipe, expansion joint bellows, and automotive exhaust connectors for critical industrial applications.",
   email: "Info@vedantsteel.com",
   enquiryEmail: "info@vedantsteel.com",
   phone: "971-565686811",
@@ -30,18 +30,51 @@ export const site = {
 } as const;
 
 export const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  // Industries tab hidden for now
+  /*
   {
-    label: "Products",
-    href: "/services",
+    label: "Industries",
+    href: "/industries",
     children: [
-      { label: "Fence", href: "/services?tab=fence" },
-      { label: "Metals", href: "/services?tab=metals" },
+      { label: "Power (Coal, Thermal & Gas)", href: "/industries/power-coal-thermal-gas" },
+      { label: "Power (Nuclear & Atomic)", href: "/industries/power-nuclear-atomic" },
+      { label: "Chemicals, Petrochemicals, Oil & Gas Refinery", href: "/industries/chemicals-petrochemicals-refinery" },
+      { label: "Pulp and Paper", href: "/industries/pulp-and-paper" },
+      { label: "Cement Industry", href: "/industries/cement-industry" },
+      { label: "Ship Building & Marine", href: "/industries/ship-building-marine" },
+      { label: "Cryogenics & LNG Transfer", href: "/industries/cryogenics-lng-transfer" },
+      { label: "Commercial Food Services", href: "/industries/commercial-food-services" },
+      { label: "Hospitality (Hotels, Hospitals)", href: "/industries/hospitality" },
+      { label: "Water Treatment & Waste Water", href: "/industries/water-treatment" },
+      { label: "Steel Industry", href: "/industries/steel-industry" },
+      { label: "Aerospace & Defense", href: "/industries/aerospace-defense" },
+      { label: "Mining & Construction", href: "/industries/mining-construction" },
+      { label: "Automotive & OEM", href: "/industries/automotive-oem" },
+      { label: "Data Centers", href: "/industries/data-centers" },
     ],
   },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Contact", href: "/contact" },
+  */
+  {
+    label: "Products",
+    href: "/products",
+    children: [
+      { label: "SS Corrugated Hose", href: "/products/ss-corrugated-hose" },
+      { label: "SS Hose with Braid", href: "/products/ss-braided-hose" },
+      { label: "SS Hose without Braid", href: "/products/ss-unbraided-hose" },
+      { label: "SS Bellows", href: "/products/ss-bellows" },
+      { label: "SS Fittings", href: "/products/ss-fittings" },
+      { label: "SS Hose Assemblies", href: "/products/hose-assemblies" },
+      { label: "Rubber Bellows", href: "/products/rubber-bellows" },
+      { label: "Automotive Exhaust Connectors", href: "/products/exhaust-connectors" },
+      { label: "EGR Tubes", href: "/products/egr-tubes" },
+      { label: "Interlock Hoses", href: "/products/interlock-hoses" },
+    ],
+  },
+  { label: "Technical", href: "/technical" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blogs" },
+  { label: "Network", href: "/network" },
 ] as const;
 
 export const footerLinks = [
@@ -56,98 +89,97 @@ export const footerLinks = [
 ] as const;
 
 export const hero = {
-  eyebrow: "PREMIUM FENCING SOLUTIONS",
-  titleLine1: "FENCING PANELS",
-  titleLine2: "& HOARDINGS",
+  eyebrow: "ENGINEERED PERFECTION",
+  titleLine1: "SS FLEXIBLE HOSES",
+  titleLine2: "& EXPANSION BELLOWS",
   description:
-    "Temporary and continuous corrugated fencing panels for construction sites, project boundaries, and secure site enclosures.",
-  primaryCta: "View Fence Products",
-  primaryHref: "/services?tab=fence",
+    "Manufacturer, supplier and exporter of stainless steel flexible hoses, corrugated and braided hose pipes, expansion joint bellows and automotive exhaust connectors — engineered in Delhi NCR, India.",
+  primaryCta: "View Products",
+  primaryHref: "/products",
   secondaryCta: "Get a Quote",
   secondaryHref: "/contact",
-  image:
-    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=80",
+  image: "/products/hero-hose.jpg",
   images: [
     {
-      src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=80",
-      alt: "Steel bars stacked in a mill warehouse",
-      eyebrow: "PREMIUM FENCING SOLUTIONS",
-      titleLine1: "FENCING PANELS",
-      titleLine2: "& HOARDINGS",
+      src: "/products/hero-hose.jpg",
+      alt: "Macro view of braided stainless steel flexible hose",
+      eyebrow: "ENGINEERED PERFECTION",
+      titleLine1: "SS FLEXIBLE HOSES",
+      titleLine2: "& EXPANSION BELLOWS",
     },
     {
-      src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=80",
-      alt: "Steel processing and fabrication",
-      eyebrow: "MILL QUALITY",
-      titleLine1: "STRUCTURAL STEEL",
-      titleLine2: "READY TO BUILD",
+      src: "/products/product-bellows.jpg",
+      alt: "Stainless steel expansion joint bellows",
+      eyebrow: "EJMA COMPLIANT",
+      titleLine1: "EXPANSION BELLOWS",
+      titleLine2: "& FLEX JOINTS",
     },
     {
-      src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=80",
-      alt: "Steel stock ready for dispatch",
-      eyebrow: "RELIABLE SUPPLY",
-      titleLine1: "METALS DELIVERED",
-      titleLine2: "ON SCHEDULE",
+      src: "/products/factory-floor.jpg",
+      alt: "Stainless steel corrugated hose wire braiding in factory",
+      eyebrow: "PRECISION MANUFACTURING",
+      titleLine1: "CORRUGATED HOSES",
+      titleLine2: "& WIRE BRAIDS",
     },
   ],
-  processTabs: ["FENCE", "METALS"],
+  processTabs: ["FLEXIBLE HOSES", "EXPANSION BELLOWS"],
 } as const;
 
 export const mission = {
-  eyebrow: "MISSION AND GOALS",
+  eyebrow: "OUR MANUFACTURING STANDARDS",
   title: "PRECISION, QUALITY, AND RELIABILITY DRIVE OUR MISSION",
   images: [
     {
-      src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80",
-      alt: "Steel mill operator at work",
+      src: "/products/quality-check.jpg",
+      alt: "Dimensional inspection of a braided stainless steel hose",
     },
     {
-      src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
-      alt: "Structural steel for construction",
+      src: "/products/pressure-testing.jpg",
+      alt: "Hydrostatic pressure testing of flexible hose assembly",
     },
     {
-      src: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
-      alt: "Metal fabrication and processing",
+      src: "/products/gallery-hoses.jpg",
+      alt: "Stainless steel braided hose assemblies ready for dispatch",
     },
   ],
   tabs: [
     {
       id: "inspection",
       label: "INSPECTION",
-      body: "Every heat of steel from Vedant Steel is checked for grade, dimension, and surface quality before it leaves our yard.",
+      body: "Every flexible hose assembly and expansion bellow is 100% inspected and pressure tested at 1.5× working pressure before leaving our plant.",
       checks: [
-        "Mill Test Certificate Review",
-        "Dimensional Inspection",
-        "Surface & Corrosion Check",
-        "Grade Verification",
-        "Load & Weight Audit",
-        "Dispatch Quality Release",
+        "1.5× Hydrostatic Pressure Test",
+        "Air-Under-Water Leak Detection",
+        "EN 10204 3.1 Mill Heat Traceability",
+        "Dimensional & CMM Verification",
+        "Liquid Dye Penetrant Weld Check",
+        "Dispatch QA Release Certificate",
       ],
     },
     {
       id: "approach",
       label: "APPROACH",
-      body: "Vedant Steel Corporation supplies fence systems and coated metals from one desk — panels, hoardings, mesh, coils, sheets, purlins, and roofing products.",
+      body: "Vedant Steel Corporation manufactures certified flexible piping and expansion solutions — SS corrugated hoses, braided hose pipes, bellows, fittings, exhaust connectors, and EGR tubes.",
       checks: [
-        "Ready Mill Stock",
-        "Cut-to-Length Supply",
-        "Grade-Matched Sourcing",
-        "Project Quantity Planning",
-        "On-Time Yard Dispatch",
-        "Dedicated Sales Desk",
+        "Hydroformed Annular Core",
+        "High-Tensile AISI 304/316 Braid",
+        "EJMA Multi-Ply Bellows Design",
+        "Custom Flange & Thread Standards",
+        "Two Modern NCR Production Plants",
+        "Dedicated Technical Engineering Desk",
       ],
     },
     {
       id: "performance",
       label: "PERFORMANCE",
-      body: "Strength, consistency, and delivery define Vedant Steel — measurable quality from enquiry to site.",
+      body: "Reliability, leak-tight containment, and vibration absorption define our products across extreme temperature and high cyclic operations.",
       checks: [
-        "Certified Steel Grades",
-        "Repeat Industrial Buyers",
-        "Consistent Heat Quality",
-        "Corrosion-Resistant Alloys",
-        "Responsive Order Support",
-        "Accountable Delivery",
+        "ISO 9001:2015 Certified QMS",
+        "Tested to ISO 10380 & BS 6501",
+        "Cryogenic (-270 °C) to Hot (700 °C)",
+        "High Burst Safety Factor (4:1)",
+        "Prompt Breakdown Turnaround",
+        "Full Worldwide Export Compliance",
       ],
     },
   ],
@@ -162,119 +194,98 @@ export const partners = {
 
 export const productGroups = [
   {
-    id: "fence",
-    label: "Fence",
-    eyebrow: "Premium fencing solutions",
+    id: "flexible-hoses",
+    label: "Flexible Hoses & Bellows",
+    eyebrow: "Industrial Flexible Systems",
     description:
-      "Temporary and continuous corrugated fencing panels with complete accessories for construction sites, project boundaries, and secure site enclosures.",
-    homeEyebrow: "Fence products",
-    homeTitle: "Premium fencing solutions",
+      "Hydroformed corrugated stainless steel hoses, high-tensile wire braided assemblies, expansion joint bellows, and precision pipe fittings for critical fluid and gas transfer.",
+    homeEyebrow: "Flexible Systems",
+    homeTitle: "SS Flexible Hoses & Bellows",
     homeSubtitle:
-      "Temporary and continuous fencing panels, PVC eco fence, weld mesh, Heras, and chain link, with the accessories used on site.",
+      "Engineered annular corrugated hoses, wire braids, bellows, and fittings tested to 1.5× working pressure for high-temperature and high-vibration duties.",
     items: [
       {
-        slug: "fencing-panels",
-        title: "Fencing Panels & Hoardings",
-        image: "/products/fencing-1.jpeg",
+        slug: "ss-corrugated-hose",
+        title: "SS Corrugated Hose",
+        image: "/products/product-corrugated.jpg",
         description:
-          "Temporary fencing panels (discontinuous) and continuous corrugated fencing, with complete accessories. Metal panels used mainly on construction sites.",
+          "Annular close-pitch corrugation for extreme pressure, cyclic flexing, and vibration absorption.",
       },
       {
-        slug: "pvc-eco-fence",
-        title: "PVC Eco Fence",
-        image: "/products/pvc-2.jpeg",
+        slug: "ss-braided-hose",
+        title: "SS Hose with Braid",
+        image: "/products/product-braid.jpg",
         description:
-          "PVC eco fence from 2.4 m to 5.0 m, and made to customer specification. Standard sizes are also available.",
+          "High-tensile AISI 304/316 wire braiding preventing elongation and boosting working pressure up to 4×.",
       },
       {
-        slug: "wire-mesh-fence",
-        title: "Wire Mesh Fence / Weld Mesh Fence / Heras Fence",
-        image: "/products/wiremesh-1.jpg",
+        slug: "ss-unbraided-hose",
+        title: "SS Hose without Braid",
+        image: "/products/product-no-braid.jpg",
         description:
-          "Stainless steel wire mesh, weld mesh, and Heras fence. Durable, corrosion-resistant mesh supplied in rolls, cut to size, or assembled.",
+          "Maximum axial and lateral movement capacity for low-to-medium pressure and vacuum lines.",
       },
       {
-        slug: "chain-link-fence",
-        title: "Chain Link Fence",
-        image: "/products/chainlink-1.jpg",
+        slug: "ss-bellows",
+        title: "SS Bellows",
+        image: "/products/product-bellows.jpg",
         description:
-          "Chain link fence for property protection. Durable and versatile, also known as hurricane fence or diamond-mesh fence.",
+          "Multi-ply expansion bellows engineered to EJMA standards for axial, lateral, and angular movement.",
+      },
+      {
+        slug: "ss-fittings",
+        title: "SS Fittings",
+        image: "/products/product-fittings.jpg",
+        description:
+          "Precision-machined stainless flanges, unions, elbows, tees, and nipples in ASTM A182 grades.",
+      },
+      {
+        slug: "hose-assemblies",
+        title: "SS Hose Assemblies",
+        image: "/products/product-assembly.jpg",
+        description:
+          "Turnkey custom hose assemblies fabricated to drawing and 100% hydrostatically pressure tested.",
+      },
+      {
+        slug: "rubber-bellows",
+        title: "Rubber Bellows",
+        image: "/products/product-rubber.jpg",
+        description:
+          "Single and twin-sphere elastomeric expansion joints silencing vibration and pump shock.",
+      },
+      {
+        slug: "interlock-hoses",
+        title: "Interlock Hoses",
+        image: "/products/product-interlock.png",
+        description:
+          "Spirally interlocked metal strip delivering exceptional crush strength and flexible casing.",
       },
     ],
   },
   {
-    id: "metals",
-    label: "Metals",
-    eyebrow: "Coated metals and roofing",
+    id: "automotive",
+    label: "Automotive Division",
+    eyebrow: "Powertrain & Exhaust Solutions",
     description:
-      "Hot dip galvanized and pre-painted coils, sandwich panels, corrugated sheets, decking, purlins, drywall, flashings, and GRP skylights.",
-    homeEyebrow: "Metals products",
-    homeTitle: "Coils, sheets and roofing",
+      "Automotive exhaust flexible connectors and EGR tube assemblies engineered for BS-VI/Euro 6 compliance and 650 °C cyclic operation.",
+    homeEyebrow: "Automotive Division",
+    homeTitle: "Exhaust Connectors & EGR Tubes",
     homeSubtitle:
-      "Galvanized and color-coated coils, sandwich panels, decking, purlins, drywall, flashings, and GRP skylight sheets.",
+      "Flexible connectors and formed stainless tubing isolating vibration and thermal expansion across engines and after-treatment systems.",
     items: [
       {
-        slug: "gi-mill-finish-coils",
-        title: "GI Mill Finish Coils",
-        image: "/products/gi-main.jpeg",
+        slug: "exhaust-connectors",
+        title: "Automotive Exhaust Connectors",
+        image: "/products/product-exhaust.png",
         description:
-          "Hot dip galvanized steel coils and sheets to ASTM A653, JIS G3302, and EN 10346.",
+          "2-ply corrugated bellows with protective wire braid and interlock liner absorbing engine rock.",
       },
       {
-        slug: "ppgi-color-coated-coils",
-        title: "PPGI Color Coated Coils",
-        image: "/products/ppgi-1.jpg",
+        slug: "egr-tubes",
+        title: "EGR Tubes",
+        image: "/products/product-egr.png",
         description:
-          "Pre-painted galvanized steel coils in RAL colors, including RAL 9002 and RAL 1001.",
-      },
-      {
-        slug: "sandwich-panels",
-        title: "Sandwich Panels",
-        image: "/products/sandwich-1.jpeg",
-        description:
-          "Roof, wall, and cold room panels with PUR and PIR insulation.",
-      },
-      {
-        slug: "corrugated-color-sheets",
-        title: "Corrugated Color Sheets",
-        image: "/products/corrugated-1.jpg",
-        description:
-          "Single skin profile corrugated sheets in sinusoidal, trapezoidal, and box profiles.",
-      },
-      {
-        slug: "decking-sheets",
-        title: "Decking Sheets",
-        image: "/products/decking-1.jpg",
-        description:
-          "Metal floor deck with ribbed profiles, including 45/150 and 75/305.",
-      },
-      {
-        slug: "z-c-purlins",
-        title: "Z & C Purlins",
-        image: "/products/purlins-1.jpg",
-        description:
-          "Z and C purlins in a range of sizes with punching options. Material conforms to ASTM A653 Grade 50 G90, with quick-fix anti-sag rods.",
-      },
-      {
-        slug: "drywall-partition-systems",
-        title: "Drywall Partition Systems",
-        image: "/products/drywall-1.jpeg",
-        description:
-          "Stud, track, furring channel, main channel, and wall angles for metal partition systems.",
-      },
-      {
-        slug: "roofing-flashings-gutters",
-        title: "Roofing Flashings & Gutters",
-        image: "/products/flashing-1.jpg",
-        description:
-          "Flashing, rain gutter, ridge ventilator, and sliding components for profiles and cladding.",
-      },
-      {
-        slug: "grp-translucent-sheets",
-        title: "GRP Translucent Sheets - Skylights",
-        image: "/products/skylights-3.jpg",
-        description:
-          "GRP translucent sheets for skylights. Daylight improves the internal environment and the energy use of the building.",
+          "CNC bent and hydroformed stainless tubing withstanding 650 °C cyclic exhaust temperatures.",
       },
     ],
   },
@@ -855,4 +866,292 @@ export const contactNeeds = [
   "Drywall Partition Systems",
   "Roofing Flashings & Gutters",
   "GRP Translucent Sheets - Skylights",
+] as const;
+
+export const industriesList = [
+  {
+    "slug": "power-coal-thermal-gas",
+    "title": "Power (Coal, Thermal &amp; Gas)",
+    "description": "Stainless steel expansion bellows and flexible hoses for coal, thermal and gas power plants — boiler feed, turbine and flue gas ducting from SS Flexhose India.",
+    "paras": [
+      "Long steam and flue-gas headers expand by hundreds of millimetres between cold and hot condition, tearing rigid welds if unrestrained.",
+      "Boiler feed pumps, FD/ID fans and turbines transmit vibration into connected piping, fatiguing flanges and instrumentation.",
+      "Pulverised-fuel ash abrades duct internals; bellows convolutions must resist particulate wear as well as heat.",
+      "Single, universal and hinged expansion joints designed for the axial, lateral and angular movement the piping stress report demands.",
+      "AISI 321 / 316L corrugated hose with single or double SS braid for boiler feed, drain and instrument tap-off lines."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Thermal growth",
+      "High-cycle vibration",
+      "Erosive flue gas",
+      "Our solution for coal, thermal &amp; gas power."
+    ]
+  },
+  {
+    "slug": "power-nuclear-atomic",
+    "title": "Power (Nuclear &amp; Atomic)",
+    "description": "Stainless steel flexible hoses and bellows for nuclear and atomic power projects — full material traceability, radiography and NDE from SS Flexhose India.",
+    "paras": [
+      "Radiological and safety-critical circuits demand seam integrity and full NDE coverage.",
+      "Every heat number, weld, test and inspection stage must reconcile to the tag.",
+      "Vendor approval, sample submission and inspection sign-off compress delivery windows.",
+      "Assemblies built against client / TPI QAP with hold points, PMI, radiography and helium leak testing as specified.",
+      "Nuclear-grade stainless with mill test certificates, PMI verification and dye-penetrant on every longitudinal seam."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Zero tolerance for leakage",
+      "Material traceability",
+      "Long qualification lead-time",
+      "Our solution for nuclear &amp; atomic power."
+    ]
+  },
+  {
+    "slug": "chemicals-petrochemicals-refinery",
+    "title": "Chemicals, Petrochemicals, Oil &amp; Gas Refinery",
+    "description": "Corrosion-resistant SS braided hoses, bellows and expansion joints for chemical plants, petrochemicals and oil refinery process lines. SS Flexhose India.",
+    "paras": [
+      "Acids, solvents, hot hydrocarbons and chlorides attack lesser stainless grades.",
+      "Reciprocating pumps and compressors transmit high-frequency vibration into suction and discharge piping.",
+      "Loading arms and hose assemblies see repeated flexing, drag and pull-away events.",
+      "316L, 321, Inconel 625, Hastelloy C-276 cores matched to media, temperature and chloride content.",
+      "Suction / discharge pump connectors that absorb vibration and misalignment without loading the flange."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Aggressive chemistry",
+      "Rotating equipment vibration",
+      "Tanker &amp; bay loading",
+      "Our solution for chemicals, petrochemicals &amp; refinery."
+    ]
+  },
+  {
+    "slug": "pulp-and-paper",
+    "title": "Pulp and Paper",
+    "description": "SS flexible hoses and rubber bellows for pulp &amp; paper mills — slurry, steam, vacuum and pump connections that survive abrasion and thermal cycling.",
+    "paras": [
+      "Pulp fibre and filler are mildly abrasive at pump speeds; convolutions must resist wear.",
+      "Dryer cans and steam headers cycle between cold start and full temperature every campaign.",
+      "White liquor, black liquor and green liquor circuits demand careful material selection.",
+      "EPDM / Nitrile spool-type expansion joints for pulp and process water pump connections, absorbing vibration and misalignment.",
+      "316L / 321 hose for steam, condensate and recovery liquor service, rated to +600 °C."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Slurry abrasion",
+      "Thermal cycling",
+      "Chemical recovery corrosion",
+      "Our solution for pulp &amp; paper."
+    ]
+  },
+  {
+    "slug": "cement-industry",
+    "title": "Cement Industry",
+    "description": "Expansion bellows and interlock hoses for cement plants — kiln, preheater and dust-extraction ducting engineered by SS Flexhose India for heat and abrasion.",
+    "paras": [
+      "Preheater and tertiary air ducts operate at 700-1000 °C with occasional excursions.",
+      "Raw meal, clinker dust and CKD abrade convolutions and internal sleeves.",
+      "Long kiln and duct runs expand by hundreds of millimetres between cold and hot state.",
+      "Multi-ply stainless bellows with internal liners and insulation packs for kiln hood and tertiary air duct expansion joints.",
+      "Stripwound interlock hose for hot air, dust and cement conveying between static and moving equipment."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Extreme temperature",
+      "Abrasive dust load",
+      "Large thermal movement",
+      "Our solution for cement."
+    ]
+  },
+  {
+    "slug": "ship-building-marine",
+    "title": "Ship Building &amp; Marine",
+    "description": "Marine-grade SS flexible hoses, bellows and rubber expansion joints for shipbuilding — engine room, fuel, ballast and sea-water cooling circuits.",
+    "paras": [
+      "Sea-water cooling and ballast lines chew through inappropriate stainless grades.",
+      "Main and auxiliary engines pump vibration into fuel, lube and cooling piping.",
+      "Engine rooms leave little space for pipe flexibility; short flexible elements do the work.",
+      "Corrosion-resistant cores and braids for sea-water and ballast service.",
+      "Marine-grade EPDM / Nitrile expansion joints for sea-water pumps and general service."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Salt-water corrosion",
+      "Engine-room vibration",
+      "Confined routing",
+      "Our solution for shipbuilding &amp; marine."
+    ]
+  },
+  {
+    "slug": "cryogenics-lng-transfer",
+    "title": "Cryogenics &amp; LNG Transfer",
+    "description": "Cryogenic SS corrugated hoses for LNG, LOX, LIN and LAr transfer — vacuum-jacket-compatible assemblies from SS Flexhose India, rated to -200 °C.",
+    "paras": [
+      "Standard carbon materials become brittle; only austenitic stainless retains ductility to -200 °C.",
+      "Fill and drain cycles hammer the hose from ambient to cryogenic in seconds.",
+      "Cryogenic gas leaks are hard to detect and dangerous; every weld must be pressure and dye-penetrant tested.",
+      "Fully austenitic cores and braids selected for cryogenic ductility and cycle life.",
+      "Hydro, pneumatic and dye-penetrant testing with certificates per assembly."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Extreme cold embrittlement",
+      "Thermal shock cycling",
+      "Leak-tightness",
+      "Our solution for cryogenics &amp; lng."
+    ]
+  },
+  {
+    "slug": "commercial-food-services",
+    "title": "Commercial Food Services",
+    "description": "Stainless steel gas and water flexible hose assemblies for commercial kitchens, food processing and CIP transfer lines — SS Flexhose India.",
+    "paras": [
+      "Assemblies must handle repeated CIP / SIP without degradation.",
+      "Cook-line gas connections must be leak-tight and fire-safe.",
+      "Cook-line and prep equipment gets moved for cleaning; hoses flex daily.",
+      "Stainless corrugated core with SS braid for LPG / PNG cook-line connections.",
+      "316L cores for hot water, CIP and food-contact service."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Cleanability",
+      "Gas safety",
+      "Frequent movement",
+      "Our solution for commercial food services."
+    ]
+  },
+  {
+    "slug": "hospitality",
+    "title": "Hospitality (Hotels, Hospitals)",
+    "description": "Gas, water, chilled-water and HVAC flexible connectors for hotels and hospitals — SS Flexhose India supplies pump connectors, bellows and hose assemblies.",
+    "paras": [
+      "Guest and clinical operations cannot accept unplanned outage for a failed connector.",
+      "One site can carry chilled water, hot water, steam, gas and medical gas circuits in parallel.",
+      "Rooftop chillers and boiler-room pumps transmit noise into occupied spaces.",
+      "Spool and twin-sphere EPDM connectors for chilled-water and hot-water pump isolation.",
+      "For gas, medical gas, hot water and steam service in tight plant rooms."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Zero downtime tolerance",
+      "Mixed services",
+      "Vibration isolation",
+      "Our solution for hotels &amp; hospitals."
+    ]
+  },
+  {
+    "slug": "water-treatment",
+    "title": "Water Treatment &amp; Waste Water",
+    "description": "Rubber and SS expansion joints for water treatment plants, sewage and pumping stations — pump isolation and pipe movement handled by SS Flexhose India.",
+    "paras": [
+      "Large centrifugal pumps stress connected piping without isolation.",
+      "Concrete-buried pipe runs settle over time, loading rigid connections.",
+      "Sewage and process effluent demand corrosion-resistant construction.",
+      "Spool, twin-sphere and single-sphere EPDM / Nitrile joints for pump inlet and outlet.",
+      "Where temperature or effluent chemistry exceeds elastomer service, stainless bellows take over."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Pump vibration &amp; noise",
+      "Settlement of buried piping",
+      "Aggressive effluent",
+      "Our solution for water &amp; waste water."
+    ]
+  },
+  {
+    "slug": "steel-industry",
+    "title": "Steel Industry",
+    "description": "SS corrugated hoses, bellows and expansion joints for steel plants — blast furnace, BOF, EAF and rolling-mill cooling and gas circuits from SS Flexhose India.",
+    "paras": [
+      "Furnace and hot-strip mill environments push ducting and hose temperatures to their limits.",
+      "Rolling mills use high-pressure hydraulic circuits with constant flexing.",
+      "Reversing mill stands and reheat furnaces transmit vibration into service piping.",
+      "321 / 310 / Inconel bellows for blast-furnace gas, BOF exhaust and reheat furnace ducting.",
+      "SS braided hose for mill hydraulic tap-offs and heavy-duty flex service."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Radiant heat &amp; hot dust",
+      "High pressure hydraulics",
+      "Vibration from mill drives",
+      "Our solution for steel &amp; metallurgy."
+    ]
+  },
+  {
+    "slug": "aerospace-defense",
+    "title": "Aerospace &amp; Defense",
+    "description": "Precision SS flexible hose assemblies and bellows for aerospace and defence programmes — full material traceability, NDE and pressure testing from SS Flexhose India.",
+    "paras": [
+      "Assemblies must meet drawing dimension and fit-up tolerances first-time.",
+      "Every heat number, weld and test result must reconcile to the tag.",
+      "Manufacture runs under the programme&#x27;s approved QAP with hold-point inspection.",
+      "6 NB upwards, hydroformed cores with mirror-finish welds and pressure testing.",
+      "Mill certificates, PMI, dimensional and pressure test records supplied per tag."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Tight tolerance",
+      "Full traceability",
+      "Programme QAP",
+      "Our solution for aerospace &amp; defence."
+    ]
+  },
+  {
+    "slug": "mining-construction",
+    "title": "Mining &amp; Construction",
+    "description": "Interlock hoses, SS braided hydraulics and exhaust connectors for mining and heavy construction equipment — SS Flexhose India.",
+    "paras": [
+      "Site conditions punish exposed hose runs — external protection matters as much as pressure rating.",
+      "Diesel gensets and heavy equipment transmit high-amplitude vibration into exhaust and hydraulic lines.",
+      "Fine particulate finds its way into every threaded and flanged joint.",
+      "Impact- and abrasion-resistant interlock construction for exhaust, dust and material conveying.",
+      "SS braided assemblies for hydraulics and high-vibration service."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Impact &amp; abrasion",
+      "High-vibration diesel plant",
+      "Dust ingress",
+      "Our solution for mining &amp; construction."
+    ]
+  },
+  {
+    "slug": "automotive-oem",
+    "title": "Automotive &amp; OEM",
+    "description": "Automotive exhaust flex connectors, EGR tubes and interlock hoses for OEM and tier-1 programmes — SS Flexhose India, serving Indian and export automotive customers.",
+    "paras": [
+      "Exhaust and EGR components cycle from ambient to over 700 °C every trip.",
+      "Engine and driveline vibration attacks any rigid tie-in in the exhaust system.",
+      "OEM programmes demand part-to-part repeatability and full documentation.",
+      "Corrugated core with interlock inner sleeve and mesh braid or outer interlock — engineered for engine mount decoupling.",
+      "Formed stainless EGR tubes with weld-end or flanged connections to the exhaust and intake manifolds."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "Thermal cycling",
+      "High vibration",
+      "PPAP-grade repeatability",
+      "Our solution for automotive &amp; oem."
+    ]
+  },
+  {
+    "slug": "data-centers",
+    "title": "Data Centers",
+    "description": "SS braided hoses, bellows and expansion joints for data center cooling, CRAC/CRAH, generator fuel and fire suppression systems — SS Flexhose India.",
+    "paras": [
+      "CRAC/CRAH fans, chilled-water pumps and diesel gensets run continuously, transmitting vibration into rigid piping.",
+      "Chilled-water circuits and generator exhaust swing between ambient and operating temperature every day.",
+      "Any leak near live IT racks or electrical switchgear is a critical event; connectors must be pressure-tested and reliable.",
+      "SS braided corrugated hose and rubber expansion joints isolate vibration between chillers, CRAC units and circulation pumps.",
+      "High-temperature exhaust flex connectors and interlock hose for standby diesel gensets."
+    ],
+    "headings": [
+      "What breaks piping in this sector.",
+      "24/7 vibration",
+      "Thermal cycling",
+      "Zero leakage tolerance",
+      "Our solution for data centers."
+    ]
+  }
 ] as const;

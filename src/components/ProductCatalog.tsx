@@ -14,13 +14,18 @@ export default function ProductCatalog() {
   const initial = searchParams.get("tab");
   const paramQuery = searchParams.get("q") ?? "";
   const [query, setQuery] = useState(paramQuery);
-  const [tab, setTab] = useState(
-    initial === "metals" || initial === "fence" ? initial : "all",
-  );
+  const isValidTab = productGroups.some((g) => g.id === initial);
+  const [tab, setTab] = useState(isValidTab && initial ? initial : "all");
 
   useEffect(() => {
     setQuery(paramQuery);
   }, [paramQuery]);
+
+  useEffect(() => {
+    if (initial && productGroups.some((g) => g.id === initial)) {
+      setTab(initial);
+    }
+  }, [initial]);
 
   const groups = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -39,24 +44,19 @@ export default function ProductCatalog() {
       .filter((group) => group.items.length > 0);
   }, [query, tab]);
 
-  const hero =
-    tab === "fence"
-      ? {
-          eyebrow: "Fence",
-          title: "Fence",
-          image: "/products/fencing-1.jpeg",
-        }
-      : tab === "metals"
-        ? {
-            eyebrow: "Metals",
-            title: "Metals",
-            image: "/products/sandwich-1.jpeg",
-          }
-        : {
-            eyebrow: "Products",
-            title: "Products",
-            image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=80",
-          };
+  const activeGroup = productGroups.find((g) => g.id === tab);
+
+  const hero = activeGroup
+    ? {
+        eyebrow: activeGroup.eyebrow,
+        title: activeGroup.label,
+        image: activeGroup.items[0]?.image || "/products/hero-hose.jpg",
+      }
+    : {
+        eyebrow: "Engineering Catalogue",
+        title: "All Products & Systems",
+        image: "/products/hero-hose.jpg",
+      };
 
   return (
     <>

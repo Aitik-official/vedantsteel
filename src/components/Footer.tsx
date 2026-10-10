@@ -1,13 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
-import { productGroups, site } from "@/data/site";
+import { site } from "@/data/site";
 
-const pageLinks = [
+const quickLinks = [
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Our Products", href: "/services" },
-  { label: "Our Portfolio", href: "/clients" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Contact", href: "/contact" },
+  { label: "All Products", href: "/products" },
+  { label: "Technical Details", href: "/technical" },
+  { label: "Certifications & QA", href: "/certifications" },
+  { label: "Supply Network", href: "/network" },
+  { label: "Blogs & Insights", href: "/blogs" },
+  { label: "Contact & Enquiry", href: "/contact" },
+];
+
+const featuredProducts = [
+  { label: "SS Corrugated Hose", href: "/products/ss-corrugated-hose" },
+  { label: "SS Hose with Braid", href: "/products/ss-braided-hose" },
+  { label: "SS Hose without Braid", href: "/products/ss-unbraided-hose" },
+  { label: "SS Expansion Bellows", href: "/products/ss-bellows" },
+  { label: "SS Pipe Fittings", href: "/products/ss-fittings" },
+  { label: "SS Hose Assemblies", href: "/products/hose-assemblies" },
+  { label: "Rubber Bellows", href: "/products/rubber-bellows" },
+  { label: "Automotive Exhaust Connectors", href: "/products/exhaust-connectors" },
+  { label: "EGR Tubes", href: "/products/egr-tubes" },
+  { label: "Interlock Hoses", href: "/products/interlock-hoses" },
+];
+
+const featuredIndustries = [
+  { label: "Power (Coal, Thermal & Gas)", href: "/industries/power-coal-thermal-gas" },
+  { label: "Power (Nuclear & Atomic)", href: "/industries/power-nuclear-atomic" },
+  { label: "Chemicals & Petrochemicals", href: "/industries/chemicals-petrochemicals-refinery" },
+  { label: "Cryogenics & LNG Transfer", href: "/industries/cryogenics-lng-transfer" },
+  { label: "Ship Building & Marine", href: "/industries/ship-building-marine" },
+  { label: "Steel & Metallurgy", href: "/industries/steel-industry" },
+  { label: "Automotive & OEM", href: "/industries/automotive-oem" },
+  { label: "Data Centers", href: "/industries/data-centers" },
 ];
 
 function SocialIcon({
@@ -46,9 +73,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative z-10 bg-industrial-dark text-white">
-      <div className="mx-auto w-full max-w-[90rem] px-6 py-10 sm:px-10 lg:px-14">
-        <div className="grid items-start gap-10 lg:grid-cols-3 lg:gap-8">
+    <footer className="relative z-10 bg-industrial-dark text-white border-t border-white/10">
+      <div className="mx-auto w-full max-w-[92rem] px-6 py-12 sm:px-10 lg:px-14">
+        <div className="grid items-start gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {/* Company Column */}
           <div>
             <Link href="/" className="inline-flex bg-white px-3.5 py-2.5 sm:px-4 sm:py-3">
               <Image
@@ -59,22 +87,40 @@ export default function Footer() {
                 className="h-11 w-auto object-contain sm:h-13 lg:h-14"
               />
             </Link>
-            <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-white/70">
-              Vedant Steel Corporation supplies fencing systems and coated metals
-              for construction sites, enclosures, roofing, and industrial projects.
+            <p className="mt-4 text-[13.5px] leading-relaxed text-white/70">
+              Manufacturer, supplier, and exporter of stainless steel flexible hoses,
+              expansion joint bellows, automotive exhaust connectors, and industrial steel products.
             </p>
+            <div className="mt-4 flex items-center gap-2 font-mono text-[11px] text-[#d90429] uppercase tracking-wider font-bold">
+              <span>ISO 9001:2015 Certified Company</span>
+            </div>
+            <div className="mt-6 flex items-center gap-4">
+              {social.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-[#d90429]"
+                >
+                  <SocialIcon type={s.type} className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h3 className="font-display text-[13px] font-bold uppercase tracking-[0.14em]">
-              Pages
+            <h3 className="font-mono text-[12px] font-bold uppercase tracking-[0.16em] text-white">
+              Navigation
             </h3>
             <ul className="mt-4 space-y-2">
-              {pageLinks.map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[14px] text-white/75 transition hover:text-industrial-steel-light"
+                    className="text-[13.5px] text-white/70 transition hover:text-[#d90429]"
                   >
                     {link.label}
                   </Link>
@@ -83,96 +129,70 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Products */}
           <div>
-            <h3 className="font-display text-[13px] font-bold uppercase tracking-[0.14em]">
-              Contact
+            <h3 className="font-mono text-[12px] font-bold uppercase tracking-[0.16em] text-white">
+              Flexible Hoses & Systems
             </h3>
-            <div className="mt-4 space-y-4">
-              <div>
-                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/50">
-                  Email
-                </p>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="mt-1 block break-all text-[14px] font-bold tracking-wide text-white transition hover:text-industrial-steel-light"
-                >
-                  {site.email}
-                </a>
-              </div>
-              <div>
-                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/50">
-                  Phone
-                </p>
-                <a
-                  href={site.phoneHref}
-                  className="mt-1 block text-[14px] font-bold text-white transition hover:text-industrial-steel-light"
-                >
-                  {site.phone}
-                </a>
-              </div>
-              <div>
-                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/50">
-                  Follow
-                </p>
-                <div className="mt-2 flex gap-2">
-                  {social.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      aria-label={item.label}
-                      target={item.href.startsWith("http") ? "_blank" : undefined}
-                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="logo-grad flex h-8 w-8 items-center justify-center text-white transition"
-                    >
-                      <SocialIcon type={item.type} className="h-3.5 w-3.5" />
-                    </a>
-                  ))}
-                </div>
-              </div>
+            <ul className="mt-4 space-y-2">
+              {featuredProducts.map((p) => (
+                <li key={p.label}>
+                  <Link
+                    href={p.href}
+                    className="text-[13.5px] text-white/70 transition hover:text-[#d90429]"
+                  >
+                    {p.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Key Industries & Contact */}
+          <div>
+            <h3 className="font-mono text-[12px] font-bold uppercase tracking-[0.16em] text-white">
+              Key Industries
+            </h3>
+            <ul className="mt-4 space-y-2">
+              {featuredIndustries.map((ind) => (
+                <li key={ind.label}>
+                  <Link
+                    href={ind.href}
+                    className="text-[13.5px] text-white/70 transition hover:text-[#d90429]"
+                  >
+                    {ind.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-6 border-t border-white/10 pt-4">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-white/50">
+                Direct Enquiry Desk
+              </p>
+              <a
+                href={`mailto:${site.email}`}
+                className="mt-1 block text-sm font-bold text-white hover:text-[#d90429]"
+              >
+                {site.email}
+              </a>
+              <a
+                href={site.phoneHref}
+                className="mt-0.5 block text-xs text-white/70 hover:text-white"
+              >
+                {site.phone}
+              </a>
             </div>
           </div>
         </div>
 
-
-
-        <div className="mt-8 space-y-4 border-t border-white/15 pt-6">
-          {productGroups.map((group) => (
-            <div key={group.id} className="flex flex-col gap-2 sm:flex-row sm:gap-8">
-              <h3 className="w-20 shrink-0 pt-0.5 font-display text-[13px] font-bold uppercase tracking-[0.14em]">
-                {group.label}
-              </h3>
-              <ul className="flex flex-wrap gap-x-5 gap-y-2">
-                {group.items.map((item) => (
-                  <li key={item.slug}>
-                    <Link
-                      href={`/products/${item.slug}`}
-                      className="text-[14px] text-white/75 transition hover:text-industrial-steel-light"
-                    >
-                      {item.slug === "wire-mesh-fence"
-                        ? "Wire Mesh / Heras Fence"
-                        : item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="border-t border-white/15 bg-black/20">
-        <div className="mx-auto flex w-full max-w-[90rem] flex-col items-center justify-between gap-2 px-6 py-2.5 pb-[calc(0.65rem+env(safe-area-inset-bottom))] text-[12px] text-white/60 sm:flex-row sm:px-10 lg:px-14">
-          <p>
-            © {new Date().getFullYear()} {site.name}. All Rights Reserved
-          </p>
-          <a
-            href="https://www.pranaviinfotech.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition hover:text-white"
-          >
-            Powered by Pranavi Infotech
-          </a>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row text-xs text-white/50 font-mono">
+          <p>© {new Date().getFullYear()} Vedant Steel Corporation. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white">Terms of Supply</Link>
+            <Link href="/contact" className="hover:text-white text-[#d90429] font-bold">Enquiry Desk</Link>
+          </div>
         </div>
       </div>
     </footer>

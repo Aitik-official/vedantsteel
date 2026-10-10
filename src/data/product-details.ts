@@ -188,4 +188,191 @@ export const productDetails: Record<
       "Finishes: clear, off-white, and tinted",
     ],
   },
+  "ss-corrugated-hose": {
+    "images": [
+        "/products/product-corrugated.jpg",
+        "/products/product-braid.jpg",
+        "/products/factory-floor.jpg",
+        "/products/quality-check.jpg",
+        "/products/gallery-hoses.jpg"
+    ],
+    "body": "SS Corrugated Hose is engineered for high pressure, cyclic flexing, and intense vibration absorption across harsh industrial operating environments. Fabricated from hydroformed close-pitch annular convolutions in high-grade stainless steel (AISI 304, 316L, 321), this hose suppresses noise, absorbs thermal growth, and compensates for pipeline misalignment. It withstands extreme temperatures from cryogenic -270 °C to scorching 700 °C without embrittlement, degradation, or permeation.",
+    "specs": [
+        "Bore Size: DN 6 to DN 300 (1/4\" to 12\")",
+        "Corrugation Profile: Annular close-pitch hydroformed convolutions",
+        "Material Grades: AISI 304, AISI 304L, AISI 316, AISI 316L, AISI 321",
+        "Operating Temperature: -270 °C to +700 °C",
+        "Working Pressure: Full vacuum up to 350 bar (dependent on bore and braid)",
+        "Standards Compliance: BS 6501 Part 1, ISO 10380 Type A/B, EJMA standards",
+        "End Connections: Flanges (ANSI 150/300, PN10/16/40, JIS, BS10), Screwed BSP/NPT, Camlock, Unions",
+        "Welding: High-integrity TIG welding with argon gas purge by certified welders",
+        "Testing: 100% Hydrostatic pressure tested at 1.5× working pressure; Pneumatic underwater leak testing"
+    ]
+},
+  "ss-braided-hose": {
+    "images": [
+        "/products/product-braid.jpg",
+        "/products/gallery-hoses.jpg",
+        "/products/pressure-testing.jpg",
+        "/products/quality-check.jpg"
+    ],
+    "body": "SS Hose with Braid features a high-tensile stainless steel wire braid woven tightly over the corrugated metal core. While the corrugated inner hose carries the fluid media, the wire braid restrains axial elongation and squirm under internal pressure, multiplying the hose assembly's working pressure capability up to 4×. Available in single or double wire braiding configurations to withstand heavy pressure surges and external mechanical abrasion.",
+    "specs": [
+        "Bore Size: DN 6 to DN 300 (1/4\" to 12\")",
+        "Braid Construction: Single or double layer high-tensile AISI 304 / 316 wire braid",
+        "Core Tube: Hydroformed annular corrugated AISI 304, 316L, 321 stainless steel",
+        "Working Pressure: Up to 400 bar for small bore / heavy industrial ratings",
+        "Elongation Control: Axial braid tensioning locks length and prevents convolution distortion",
+        "Temperature Range: -200 °C to +600 °C continuous duty",
+        "End Fittings: Fixed & floating flanges, hex nipples, male/female BSP/NPT unions, quick couplings",
+        "Welding Standards: TIG welded per ASME Section IX / EN ISO 15614 qualification",
+        "Quality Assurance: 100% Hydrostatically tested; Helium mass spectrometer leak test available"
+    ]
+},
+  "ss-unbraided-hose": {
+    "images": [
+        "/products/product-no-braid.jpg",
+        "/products/product-corrugated.jpg",
+        "/products/factory-floor.jpg"
+    ],
+    "body": "SS Hose without Braid delivers pure flexibility where movement capacity is paramount and operating pressures are low or moderate. Free from external wire braid restraint, the flexible metal convolutions achieve the widest axial, lateral, and angular deflection. It installs effortlessly in compact, tortuous geometries and reliably handles aggressive chemicals and high temperatures where rubber or polymer hoses rapidly degrade.",
+    "specs": [
+        "Bore Size: DN 6 to DN 200 (1/4\" to 8\")",
+        "Core Profile: Close-pitch annular corrugated stainless steel tube",
+        "Material Grades: AISI 304, AISI 304L, AISI 316, AISI 316L",
+        "Movement Capacity: Maximum axial compression, lateral offset, and angular articulation",
+        "Operating Temperature: -200 °C to +550 °C",
+        "Pressure Capability: Vacuum through low/medium working pressures",
+        "Corrosion Immunity: 100% metal construction resistant to chemical attack and aging",
+        "Applications: Burner fuel lines, vacuum systems, gas ducting, electrical conduit, exhaust connections"
+    ]
+},
+  "ss-bellows": {
+    "images": [
+        "/products/product-bellows.jpg",
+        "/products/product-assembly.jpg",
+        "/products/quality-check.jpg",
+        "/products/factory-floor.jpg"
+    ],
+    "body": "SS Bellows (Expansion Joints) are multi-ply precision flexible components engineered to EJMA standards to absorb thermal expansion, pressure thrust, and mechanical vibration across pumps, turbines, boilers, and piping systems. Designed for axial, lateral, and angular movements, they protect pipelines against catastrophic stress fractures and anchor overload.",
+    "specs": [
+        "Nominal Diameter: DN 25 to DN 2000 (1\" to 80\")",
+        "Bellows Construction: Multi-ply thin-wall hydroformed or roll-formed stainless steel (AISI 304, 316L, 321, Inconel)",
+        "Design Standard: Expansion Joint Manufacturers Association (EJMA) 10th Edition",
+        "Configurations: Axial, Universal, Hinged, Gimbal, Tied, and Pressure Balanced",
+        "Hardware: Carbon steel or stainless steel tie rods, internal sleeve liners, protective external covers",
+        "Operating Temperature: -196 °C to +850 °C",
+        "Cycle Life: Engineered and validated for up to 50,000+ thermal fatigue cycles",
+        "Testing: Radiographic examination, liquid penetrant testing, 1.5× hydrostatic pressure test"
+    ]
+},
+  "ss-fittings": {
+    "images": [
+        "/products/product-fittings.jpg",
+        "/products/product-assembly.jpg",
+        "/products/factory-floor.jpg"
+    ],
+    "body": "SS Fittings represent precision-machined stainless pipe fittings engineered to provide leak-free transitions between flexible metal hoses and rigid pipeline infrastructure. Stocked and CNC-machined in matched metallurgical grades (ASTM A182 F304/F316L), the range encompasses flanges, elbows, tees, reducers, unions, nipples, and quick couplings built to exact international dimensional standards.",
+    "specs": [
+        "Fitting Types: Flanges (Slip-on, Weld Neck, Blind), Elbows (45°/90°), Tees, Reducers, Unions, Nipples",
+        "Material Grades: ASTM A182 / A403 WP304, WP304L, WP316, WP316L, Duplex 2205",
+        "Flange Standards: ANSI/ASME B16.5 Class 150/300/600, EN 1092-1 PN10/PN16/PN25/PN40, JIS, BS10",
+        "Thread Types: BSP, BSPT (ISO 7-1), NPT (ASME B1.20.1), Metric ISO threads",
+        "Pressure Ratings: 150 PSI up to 3000 PSI / 6000 PSI forged high-pressure fittings",
+        "Fabrication: CNC precision machined from forgings or seamless buttweld components",
+        "Surface Finish: Pickled & passivated, electropolished on request",
+        "Certification: EN 10204 Type 3.1 Material Test Certificate with full heat traceability"
+    ]
+},
+  "hose-assemblies": {
+    "images": [
+        "/products/product-assembly.jpg",
+        "/products/gallery-hoses.jpg",
+        "/products/pressure-testing.jpg",
+        "/products/quality-check.jpg"
+    ],
+    "body": "SS Hose Assemblies are customized turnkey flexible hose systems assembled and tested to exact customer engineering drawings and technical specifications. Hoses are cut, braided, fitted with precision end connections, and TIG-welded by certified welders, followed by stringent hydrostatic pressure testing prior to dispatch.",
+    "specs": [
+        "Bore Size: DN 6 to DN 300 (1/4\" to 12\"), custom overall length (OAL) per client drawing",
+        "Assembly Type: Flexible corrugated metal core with single or double stainless braid",
+        "End Connections: Flanged, threaded unions, camlock quick disconnects, weld stubs, sanitary tri-clover",
+        "Welding: TIG welding under controlled argon atmosphere per ASME Sec IX WPS/PQR",
+        "Testing: 100% Hydrostatic pressure testing at 1.5× operating pressure; air underwater leak test",
+        "Inspection: Dimensional inspection, weld dye penetrant, endoscopic bore check",
+        "Traceability: Laser or punch stamped with batch number, heat number, and test pressure",
+        "Documentation: Hydrostatic test certificate, mill test certificate (3.1), certificate of conformity"
+    ]
+},
+  "rubber-bellows": {
+    "images": [
+        "/products/product-rubber.jpg",
+        "/products/product-bellows.jpg",
+        "/products/quality-check.jpg"
+    ],
+    "body": "Rubber Bellows (Expansion Joints) serve as flexible elastomeric hinges for water, HVAC, chemical, and slurry pumping circuits. Designed with single or twin spherical arches, they dampen pump vibration, absorb thermal expansion, accommodate axial/lateral misalignment, and cushion against pipeline water hammer surges.",
+    "specs": [
+        "Configurations: Single sphere, twin sphere, wide arch, spool type",
+        "Elastomer Options: EPDM (water/steam/glycol), Neoprene (general HVAC), NBR/Nitrile (oils/fuels), Hypalon",
+        "Reinforcement: Multi-ply nylon cord fabric with embedded high-strength steel wire beads",
+        "Size Range: DN 25 to DN 600 (1\" to 24\")",
+        "Working Pressure: 10 bar / 16 bar (Burst rating up to 30 bar)",
+        "Temperature Range: -10 °C to +115 °C (EPDM continuous rating)",
+        "Flanges: Electro-galvanized carbon steel or AISI 304/316 floating flanges (ANSI 150, PN10, PN16)",
+        "Restraint Units: Tie-rod limiters available to restrain pressure thrust forces"
+    ]
+},
+  "exhaust-connectors": {
+    "images": [
+        "/products/product-exhaust.png",
+        "/products/gallery-hoses.jpg",
+        "/products/factory-floor.jpg"
+    ],
+    "body": "Automotive Exhaust Connectors provide a robust, gas-tight flexible connection between the vibrating engine manifold and the vehicle exhaust/catalytic converter system. Built with multi-ply hydroformed stainless bellows, outer protective wire braid, and internal interlock liner, they absorb violent engine rock and thermal shock while eliminating cabin NVH (Noise, Vibration, Harshness).",
+    "specs": [
+        "Application: Passenger cars, heavy commercial vehicles (HCV/LCV), off-highway equipment, generator sets",
+        "Construction: 2-ply hydroformed corrugated bellows with outer stainless steel braid",
+        "Internal Liner: Stainless steel interlock spiral liner for laminar exhaust flow and thermal shielding",
+        "Material Grades: AISI 304 (austenitic) / AISI 409 & 439 (ferritic heat-resistant stainless)",
+        "Size Range: Inside Diameter 38 mm to 127 mm (1.5\" to 5\"), lengths 100 mm to 350 mm",
+        "End Collars: Aluminized steel or stainless steel weld stubs, flared ends, or slip-fit collars",
+        "Compliance: Stringent BS-VI / Euro 6 leak-tightness and endurance criteria",
+        "Durability: Rated for high-cycle thermal fatigue and severe mechanical vibration testing"
+    ]
+},
+  "egr-tubes": {
+    "images": [
+        "/products/product-egr.png",
+        "/products/product-exhaust.png",
+        "/products/quality-check.jpg"
+    ],
+    "body": "EGR Tubes (Exhaust Gas Recirculation) are high-precision formed stainless steel tubing assemblies engineered to endure 650 °C cyclic exhaust gas temperatures and relentless powertrain vibration. Featuring localized hydroformed corrugated flexible zones, they prevent thermal fatigue fractures and ensure leak-free BS-VI emission compliance.",
+    "specs": [
+        "Application: Exhaust Gas Recirculation loops in BS-VI / Euro 6 diesel and petrol engines",
+        "Material Grades: High-grade AISI 304, AISI 321, AISI 409, AISI 439 stainless steel",
+        "Temperature Resistance: Continuous operation up to 650 °C with extreme thermal cyclic spikes",
+        "Fabrication: Multi-axis CNC tube bending, localized hydroformed convolutions, end spinning",
+        "Vibration Isolation: Corrugated flexible sections decouple engine block and manifold stress",
+        "Terminations: CNC machined mounting flanges, brazed support brackets, sensor bosses",
+        "Leak Testing: Helium mass spectrometer leak testing (< 1×10⁻⁶ mbar·l/s)",
+        "Quality Control: CMM coordinate measuring against OEM 3D CAD data, fixture validation"
+    ]
+},
+  "interlock-hoses": {
+    "images": [
+        "/products/product-interlock.png",
+        "/products/product-corrugated.jpg",
+        "/products/gallery-hoses.jpg"
+    ],
+    "body": "Interlock Hoses are extremely rugged, heavy-duty flexible metal hoses manufactured by spirally winding a profiled metal strip so the edges interlock mechanically. This articulated construction provides unmatched crush resistance, kink protection, and tensile toughness while bending smoothly across all planes.",
+    "specs": [
+        "Bore Size Range: Inside Diameter (ID) 25 mm to 300 mm (1\" to 12\")",
+        "Construction Profile: Double-lock spirally interlocked profiled metal strip",
+        "Variants: Packed (with cotton, elastomer, or copper wire for gas sealing) or Unpacked (open mechanical casing)",
+        "Materials: High-tensile AISI 304 stainless steel or hot-dip galvanized steel strip",
+        "Mechanical Properties: Outstanding crush resistance, kink resistance, and puncture proofing",
+        "Flexibility: 4-way smooth articulation without cross-sectional ovalization",
+        "End Terminations: Welded flanges, threaded male/female nipples, slip cuffs, clamp connections",
+        "Applications: Vehicle exhaust extraction, hot air/fume ducting, dry bulk material conveyance, heavy cable protection"
+    ]
+},
 };

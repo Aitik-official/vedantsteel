@@ -60,13 +60,13 @@ export default function AboutPageContent() {
             </p>
             <div className="mt-4 space-y-3.5 text-[14px] leading-[1.8] text-[#5c5c5c] sm:mt-5 sm:space-y-4 sm:text-[15px]">
               <p>
-                Vedant Steel Corporation is committed to exceptional quality and practical solutions for clients across the UAE, the GCC, and beyond. With over 15 years in steel trading and building materials, the firm is a trusted partner for businesses of all sizes.
+                Vedant Steel Corporation is a premier manufacturer, supplier, and exporter of stainless steel flexible hoses, corrugated pipes, expansion joint bellows, and automotive exhaust connectors. Built upon engineering roots starting in 1995 and incorporated in 2015, the firm is an established partner to mission-critical industries.
               </p>
               <p>
-                Dedication to excellence, competitive pricing, and a complete range has made Vedant Steel a preferred choice for construction companies, industrial projects, commercial enterprises, and institutional clients throughout the Middle East. The work is a one-stop service, from material selection and customization to processing and distribution.
+                With dual manufacturing plants located in Delhi NCR (DSIIDC Bawana and Reliance MET City), we produce high-pressure annular corrugated hoses, high-tensile wire braids, EJMA-compliant multi-ply expansion bellows, and BS-VI automotive decouplers and EGR tubes.
               </p>
               <p>
-                Today, Vedant Steel supplies premium materials to Dubai, Abu Dhabi, Sharjah, and the other Emirates, with a growing presence in Saudi Arabia, Oman, Bahrain, Kuwait, Qatar, and beyond.
+                Today, Vedant Steel supplies certified flexible piping and expansion solutions to power plants, chemical refineries, cryogenics, steel mills, and automotive OEMs across India, the UAE, the GCC, and international markets.
               </p>
             </div>
             <div className="mt-7 sm:mt-8">

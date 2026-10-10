@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, ChevronRight, Menu, Search, X } from "lucide-react";
+import { ChevronDown, Menu, Search, X } from "lucide-react";
 import Logo from "./Logo";
-import { navItems, productGroups } from "@/data/site";
+import { navItems } from "@/data/site";
 
 type NavChild = { label: string; href: string };
 type NavItem = {
@@ -16,13 +16,11 @@ type NavItem = {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [openGroup, setOpenGroup] = useState<string | null>(null);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileGroup, setMobileGroup] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<Record<string, boolean>>({});
   const pathname = usePathname();
   const [pastHero, setPastHero] = useState(pathname !== "/");
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const navContainerRef = useRef<HTMLDivElement>(null);
   const closeMenuTimer = useRef<number | null>(null);
   const isHome = pathname === "/";
 
@@ -34,9 +32,8 @@ export default function Navbar() {
 
   useEffect(() => {
     function onClick(e: MouseEvent) {
-      if (!dropdownRef.current?.contains(e.target as Node)) {
-        setServicesOpen(false);
-        setOpenGroup(null);
+      if (!navContainerRef.current?.contains(e.target as Node)) {
+        setActiveDropdown(null);
       }
     }
     document.addEventListener("mousedown", onClick);
@@ -45,10 +42,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setOpen(false);
-    setServicesOpen(false);
-    setOpenGroup(null);
-    setMobileServicesOpen(false);
-    setMobileGroup(null);
+    setActiveDropdown(null);
     setPastHero(pathname !== "/");
   }, [pathname]);
 
@@ -81,9 +75,11 @@ export default function Navbar() {
 
   const solidNav = !isHome || pastHero || open;
   const linkBase = solidNav
-    ? "text-[#333] hover:text-industrial-steel"
+    ? "text-[#2b2b2b] hover:text-[#d90429]"
     : "text-white/85 hover:text-white";
-  const linkActive = solidNav ? "text-industrial-steel font-bold" : "text-white font-bold";
+  const linkActive = solidNav
+    ? "text-[#d90429] font-bold"
+    : "text-white font-bold";
 
   const headerClass = `fixed inset-x-0 top-0 ${
     solidNav
@@ -93,286 +89,216 @@ export default function Navbar() {
 
   return (
     <>
-    <header className={`z-50 transition-colors duration-300 ${headerClass}`}>
-      <div className="relative mx-auto flex w-full max-w-[90rem] items-center gap-3 px-6 py-2 sm:gap-5 sm:px-10 lg:gap-8 lg:px-14">
-        <div className="shrink-0">
-          <Logo light={!solidNav} />
-        </div>
+      <header className={`z-50 transition-colors duration-300 ${headerClass}`}>
+        <div
+          ref={navContainerRef}
+          className="relative mx-auto flex w-full max-w-[92rem] items-center justify-between gap-3 px-4 py-2 sm:gap-5 sm:px-8 lg:px-12"
+        >
+          {/* Brand Logo */}
+          <div className="shrink-0">
+            <Logo light={!solidNav} />
+          </div>
 
-        <form action="/services" method="get" className="hidden min-w-0 flex-1 md:block">
-          <label
-            className={`flex max-w-md items-center gap-2 border px-3 py-2 ${
-              solidNav
-                ? "border-[#e4e4e4] bg-industrial-soft"
-                : "border-white/25 bg-white/10"
-            }`}
-          >
-            <Search
-              className={`h-4 w-4 shrink-0 ${solidNav ? "text-[#8a8a8a]" : "text-white/70"}`}
-            />
-            <input
-              name="q"
-              type="search"
-              placeholder="Search products"
-              className={`w-full bg-transparent text-sm outline-none ${
-                solidNav
-                  ? "text-industrial-ink placeholder:text-[#9a9a9a]"
-                  : "text-white placeholder:text-white/50"
-              }`}
-            />
-          </label>
-        </form>
+          {/* Desktop Navigation Links */}
+          <nav className="hidden items-center gap-5 xl:gap-7 lg:flex">
+            {(navItems as readonly NavItem[]).map((item) => {
+              const hasChildren = Boolean(item.children && item.children.length > 0);
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
+              const isDropdownOpen = activeDropdown === item.label;
 
-        <nav className="ml-auto hidden items-center justify-end gap-6 xl:flex">
-          {(navItems as readonly NavItem[]).map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
-
-            if (item.children?.length) {
-              return (
-                <div
-                  key={item.label}
-                  className="relative"
-                  ref={dropdownRef}
-                  onMouseEnter={() => {
-                    if (closeMenuTimer.current) window.clearTimeout(closeMenuTimer.current);
-                    setServicesOpen(true);
-                  }}
-                  onMouseLeave={() => {
-                    closeMenuTimer.current = window.setTimeout(() => {
-                      setServicesOpen(false);
-                      setOpenGroup(null);
-                    }, 160);
-                  }}
-                >
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setServicesOpen((v) => !v);
-                      setOpenGroup(null);
+              if (hasChildren) {
+                return (
+                  <div
+                    key={item.label}
+                    className="relative"
+                    onMouseEnter={() => {
+                      if (closeMenuTimer.current) window.clearTimeout(closeMenuTimer.current);
+                      setActiveDropdown(item.label);
                     }}
-                    className={`inline-flex items-center gap-1 text-[12px] font-bold uppercase tracking-[0.14em] transition ${
-                      active || pathname.startsWith("/services")
-                        ? linkActive
-                        : linkBase
-                    }`}
+                    onMouseLeave={() => {
+                      closeMenuTimer.current = window.setTimeout(() => {
+                        setActiveDropdown(null);
+                      }, 180);
+                    }}
                   >
-                    {item.label}
-                    <span className="text-[10px] opacity-70">+</span>
-                    <ChevronDown
-                      className={`h-3.5 w-3.5 transition ${
-                        servicesOpen ? "rotate-180" : ""
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setActiveDropdown((curr) => (curr === item.label ? null : item.label))
+                      }
+                      className={`inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest font-semibold transition py-2 ${
+                        isActive || isDropdownOpen ? linkActive : linkBase
                       }`}
-                    />
-                  </button>
-                  {servicesOpen ? (
-                    <div className="absolute left-0 top-full z-50 flex items-start pt-4">
-                      <div className="w-44 border border-black/5 bg-white py-2 shadow-[0_24px_60px_rgba(0,0,0,0.12)]">
-                        {productGroups.map((group) => {
-                          const activeGroup = openGroup === group.id;
-                          return (
-                            <button
-                              key={group.id}
-                              type="button"
-                              onMouseEnter={() => setOpenGroup(group.id)}
-                              onClick={() => setOpenGroup(group.id)}
-                              className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-[12px] font-semibold uppercase tracking-[0.14em] transition ${
-                                activeGroup
-                                  ? "bg-industrial-soft text-industrial-steel"
-                                  : "text-industrial-ink hover:bg-industrial-soft hover:text-industrial-steel"
-                              }`}
-                            >
-                              {group.label}
-                              <ChevronRight className="h-3.5 w-3.5" />
-                            </button>
-                          );
-                        })}
-                      </div>
-                      {openGroup ? (
-                        <div className="ml-1 max-h-[min(70vh,420px)] w-72 overflow-y-auto border border-black/5 bg-white py-2 shadow-[0_24px_60px_rgba(0,0,0,0.12)]">
-                          {productGroups
-                            .filter((group) => group.id === openGroup)
-                            .map((group) => (
-                              <div key={group.id}>
-                                <Link
-                                  href={`/services?tab=${group.id}`}
-                                  onClick={() => setServicesOpen(false)}
-                                  className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-industrial-steel hover:bg-industrial-soft"
-                                >
-                                  All {group.label}
-                                </Link>
-                                {group.items.map((product) => (
-                                  <Link
-                                    key={product.slug}
-                                    href={`/products/${product.slug}`}
-                                    onClick={() => setServicesOpen(false)}
-                                    className="block px-4 py-2 text-[13.5px] leading-snug text-[#444] transition hover:bg-industrial-soft hover:text-industrial-steel"
-                                  >
-                                    {product.title}
-                                  </Link>
-                                ))}
-                              </div>
-                            ))}
-                        </div>
-                      ) : null}
-                    </div>
-                  ) : null}
-                </div>
-              );
-            }
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        className={`h-3 w-3 transition-transform duration-200 ${
+                          isDropdownOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
 
-            return (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={`text-[12px] font-bold uppercase tracking-[0.14em] transition ${
-                  active ? linkActive : linkBase
-                }`}
-              >
-                {item.label}
-                {item.label !== "Contact" ? (
-                  <span className="ml-1 text-[10px] opacity-70">+</span>
-                ) : null}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="ml-auto flex shrink-0 items-center xl:hidden">
-          <button
-            type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => {
-              setOpen((v) => !v);
-              setMobileServicesOpen(false);
-            }}
-            className={`flex h-10 w-10 items-center justify-center transition ${
-              solidNav
-                ? "border border-[#e6e6e6] bg-industrial-soft text-industrial-ink hover:bg-industrial-panel"
-                : "border border-white/25 bg-transparent text-white hover:bg-white/15"
-            }`}
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
-      </div>
-
-      {open ? (
-        <>
-          <button
-            type="button"
-            aria-label="Close menu"
-            className="fixed inset-0 z-40 bg-black/40"
-            onClick={() => setOpen(false)}
-          />
-          <div className="absolute left-3 right-3 top-full z-50 mt-2 max-h-[min(70vh,480px)] overflow-y-auto border border-black/5 bg-white px-3 py-3 shadow-[0_20px_50px_rgba(0,0,0,0.18)] sm:left-6 sm:right-6 sm:px-4 sm:py-4">
-            <form action="/services" method="get" className="mb-3 md:hidden">
-              <label className="flex items-center gap-2 border border-[#e6e6e6] px-3 py-2.5">
-                <Search className="h-4 w-4 shrink-0 text-[#8a8a8a]" />
-                <input
-                  name="q"
-                  type="search"
-                  placeholder="Search products"
-                  className="w-full bg-transparent text-sm text-industrial-ink outline-none placeholder:text-[#9a9a9a]"
-                />
-              </label>
-            </form>
-            <nav className="flex flex-col gap-0.5">
-              {(navItems as readonly NavItem[]).map((item) => {
-                if (item.children?.length) {
-                  return (
-                    <div key={item.label}>
-                      <button
-                        type="button"
-                        onClick={() => setMobileServicesOpen((v) => !v)}
-                        className="flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-[15px] font-semibold text-industrial-ink hover:bg-industrial-soft hover:text-industrial-steel"
-                      >
-                        {item.label}
-                        <ChevronDown
-                          className={`h-4 w-4 transition ${
-                            mobileServicesOpen ? "rotate-180" : ""
+                    {/* Dropdown Menu */}
+                    {isDropdownOpen ? (
+                      <div className="absolute left-0 top-full z-50 pt-1">
+                        <div
+                          className={`border border-[#dedede] bg-[#f5f6f7] py-1.5 shadow-[0_20px_50px_rgba(0,0,0,0.15)] ${
+                            item.label === "Industries"
+                              ? "w-80 max-h-[min(80vh,520px)] overflow-y-auto"
+                              : "w-72"
                           }`}
-                        />
-                      </button>
-                      {mobileServicesOpen ? (
-                        <div className="pb-2">
-                          {productGroups.map((group) => {
-                            const groupOpen = mobileGroup === group.id;
+                        >
+                          {item.children?.map((child) => {
+                            const isChildActive = pathname === child.href;
                             return (
-                              <div key={group.id}>
-                                <button
-                                  type="button"
-                                  onClick={() =>
-                                    setMobileGroup(groupOpen ? null : group.id)
-                                  }
-                                  className="flex w-full items-center justify-between py-2.5 pr-3 pl-6 text-left text-[13px] font-semibold uppercase tracking-[0.12em] text-industrial-ink hover:text-industrial-steel"
-                                >
-                                  {group.label}
-                                  <ChevronDown
-                                    className={`h-4 w-4 transition ${
-                                      groupOpen ? "rotate-180" : ""
-                                    }`}
-                                  />
-                                </button>
-                                {groupOpen ? (
-                                  <div className="pb-2">
-                                    <Link
-                                      href={`/services?tab=${group.id}`}
-                                      onClick={() => setOpen(false)}
-                                      className="block py-2 pr-3 pl-9 text-[13px] text-industrial-steel"
-                                    >
-                                      All {group.label}
-                                    </Link>
-                                    {group.items.map((product) => (
-                                      <Link
-                                        key={product.slug}
-                                        href={`/products/${product.slug}`}
-                                        onClick={() => setOpen(false)}
-                                        className="block py-2 pr-3 pl-9 text-sm text-[#555] hover:text-industrial-steel"
-                                      >
-                                        {product.title}
-                                      </Link>
-                                    ))}
-                                  </div>
-                                ) : null}
-                              </div>
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                onClick={() => setActiveDropdown(null)}
+                                className={`block px-4 py-2.5 text-[12.5px] leading-snug font-medium transition ${
+                                  isChildActive
+                                    ? "bg-[#d90429] text-white font-bold"
+                                    : "text-[#2b2b2b] hover:bg-[#d90429] hover:text-white"
+                                }`}
+                              >
+                                {child.label}
+                              </Link>
                             );
                           })}
                         </div>
-                      ) : null}
-                    </div>
-                  );
-                }
-
-                return (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-md px-3 py-3 text-[15px] font-semibold text-industrial-ink hover:bg-industrial-soft hover:text-industrial-steel"
-                  >
-                    {item.label}
-                  </Link>
+                      </div>
+                    ) : null}
+                  </div>
                 );
-              })}
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="logo-grad mt-3 inline-flex w-full items-center justify-center px-6 py-3.5 text-sm font-semibold text-white"
-              >
-                Get Quote
-              </Link>
-            </nav>
+              }
+
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={`font-mono text-[11px] uppercase tracking-widest font-semibold transition py-2 ${
+                    isActive ? linkActive : linkBase
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Right Action: Red Enquiry Button */}
+          <div className="hidden items-center gap-4 lg:flex">
+            <Link
+              href="/contact"
+              className="bg-[#d90429] hover:bg-[#b00220] px-5 py-2 font-mono text-[11px] uppercase tracking-widest text-white font-bold transition shadow-sm"
+            >
+              ENQUIRY
+            </Link>
           </div>
-        </>
-      ) : null}
-    </header>
-    {isHome ? null : (
-      <div className="h-[calc(6rem*140/232+1rem)] sm:h-[calc(7rem*140/232+1rem)]" aria-hidden />
-    )}
+
+          {/* Mobile Menu Button */}
+          <div className="flex shrink-0 items-center lg:hidden">
+            <button
+              type="button"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className={`flex h-10 w-10 items-center justify-center transition ${
+                solidNav
+                  ? "border border-[#e6e6e6] bg-industrial-soft text-industrial-ink hover:bg-industrial-panel"
+                  : "border border-white/25 bg-transparent text-white hover:bg-white/15"
+              }`}
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Drawer */}
+        {open ? (
+          <>
+            <button
+              type="button"
+              aria-label="Close menu"
+              className="fixed inset-0 z-40 bg-black/50"
+              onClick={() => setOpen(false)}
+            />
+            <div className="absolute left-3 right-3 top-full z-50 mt-2 max-h-[min(80vh,540px)] overflow-y-auto border border-black/10 bg-white px-4 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.2)] sm:left-6 sm:right-6">
+              <nav className="flex flex-col gap-1">
+                {(navItems as readonly NavItem[]).map((item) => {
+                  const hasChildren = Boolean(item.children && item.children.length > 0);
+                  const isExpanded = mobileExpanded[item.label];
+
+                  if (hasChildren) {
+                    return (
+                      <div key={item.label} className="border-b border-[#eee] pb-1">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setMobileExpanded((prev) => ({
+                              ...prev,
+                              [item.label]: !prev[item.label],
+                            }))
+                          }
+                          className="flex w-full items-center justify-between py-3 text-left font-mono text-[12px] font-bold uppercase tracking-widest text-industrial-ink hover:text-[#d90429]"
+                        >
+                          <span>{item.label}</span>
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform ${
+                              isExpanded ? "rotate-180 text-[#d90429]" : ""
+                            }`}
+                          />
+                        </button>
+
+                        {isExpanded ? (
+                          <div className="mb-2 max-h-60 overflow-y-auto pl-3 space-y-1">
+                            {item.children?.map((child) => (
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                onClick={() => setOpen(false)}
+                                className="block py-1.5 text-[13px] text-[#444] hover:text-[#d90429] font-medium"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className="block border-b border-[#eee] py-3 font-mono text-[12px] font-bold uppercase tracking-widest text-industrial-ink hover:text-[#d90429]"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="mt-4 inline-flex w-full items-center justify-center bg-[#d90429] py-3.5 font-mono text-xs font-bold uppercase tracking-widest text-white hover:bg-[#b00220]"
+                >
+                  ENQUIRY
+                </Link>
+              </nav>
+            </div>
+          </>
+        ) : null}
+      </header>
+
+      {isHome ? null : (
+        <div className="h-[calc(4.5rem*140/232+1.5rem)] sm:h-[calc(5rem*140/232+1.5rem)]" aria-hidden />
+      )}
     </>
   );
 }

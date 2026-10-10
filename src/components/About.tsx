@@ -5,20 +5,20 @@ import SectionButton from "./SectionButton";
 
 const highlights = [
   {
-    title: "Wide Product Range",
-    detail: "From GI & PPGI coils to roofing, purlins, sandwich panels and fencing solutions.",
+    title: "Annular Corrugation",
+    detail: "Hydroformed close-pitch convolutions designed for maximum cycle fatigue life.",
   },
   {
-    title: "Competitive Pricing",
-    detail: "Commercial pricing for project, bulk and ongoing supply requirements.",
+    title: "High-Tensile Wire Braid",
+    detail: "AISI 304/316 tight wire braiding preventing elongation and multiplying working pressure up to 4×.",
   },
   {
-    title: "Project-Focused Supply",
-    detail: "Products supplied to meet the specifications, quantities and timelines of your project.",
+    title: "100% Tested & Certified",
+    detail: "Hydrostatic pressure testing at 1.5× working pressure and full EN 10204 3.1 material traceability.",
   },
   {
-    title: "UAE-Wide Supply",
-    detail: "Supplying contractors, purchasers, fabricators and businesses across the UAE.",
+    title: "Two Production Facilities",
+    detail: "State-of-the-art manufacturing plants in Bawana (New Delhi) and Reliance MET City (Haryana).",
   },
 ] as const;
 
@@ -45,8 +45,8 @@ export default function About({
           <div className="grid h-full grid-cols-12 gap-2.5 sm:gap-3">
             <div className="relative col-span-7 h-full min-h-[180px] overflow-hidden bg-industrial-dark sm:min-h-[240px] lg:min-h-[280px]">
               <Image
-                src="/products/fencing-1.jpeg"
-                alt="Corrugated fencing panels on a project site"
+                src="/products/product-braid.jpg"
+                alt="Stainless steel wire braiding on a flexible hose"
                 fill
                 className="object-cover transition duration-700 hover:scale-105"
                 sizes="(max-width: 640px) 55vw, (max-width: 1024px) 50vw, 30vw"
@@ -56,19 +56,19 @@ export default function About({
             <div className="col-span-5 flex h-full flex-col gap-2.5 sm:gap-3">
               <div className="relative min-h-[90px] flex-1 overflow-hidden bg-industrial-dark sm:min-h-[120px]">
                 <Image
-                  src="/products/ppgi-1.jpg"
-                  alt="Color coated steel coils ready for supply"
+                  src="/products/product-bellows.jpg"
+                  alt="Stainless steel expansion joint bellows"
                   fill
                   className="object-cover transition duration-700 hover:scale-105"
                   sizes="(max-width: 640px) 40vw, (max-width: 1024px) 35vw, 18vw"
                 />
               </div>
               <div className="bg-industrial-dark p-3.5 text-white sm:p-5 lg:p-6">
-                <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-industrial-steel sm:text-[11px]">
-                  15+ Years
+                <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#d90429] sm:text-[11px] font-mono font-bold">
+                  Roots from 1995
                 </p>
                 <p className="mt-1.5 font-serif text-[1.1rem] italic leading-tight text-white sm:text-[1.25rem] lg:text-[1.3rem]">
-                  Building excellence for every project
+                  Engineered perfection for every project
                 </p>
               </div>
             </div>
@@ -86,17 +86,17 @@ export default function About({
             Why Choose VEDANT STEEL
           </h2>
           <p className="mt-3 max-w-xl font-serif text-[1.15rem] italic leading-snug text-industrial-ink sm:mt-4 sm:text-[1.3rem] lg:text-[1.45rem]">
-            15+ Years of Experience
+            Engineered Flexible Piping &amp; Expansion Bellows
           </p>
           <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-[#5c5c5c] sm:text-[15px]">
-            Steel &amp; building materials supplied for real project requirements.
+            Manufacturer, supplier, and exporter of stainless steel flexible hoses, expansion joint bellows, and automotive exhaust connectors — engineered to ISO 9001:2015, BS 6501, and EJMA standards.
           </p>
 
           <div className="mt-5 grid gap-3.5 border-y border-[#e6e6e6] py-4 sm:mt-6 sm:grid-cols-2 sm:gap-4 sm:py-5">
             {highlights.map((item, i) => (
               <Reveal key={item.title} delay={i * 70} className="flex flex-col">
                 <div className="flex items-baseline gap-2">
-                  <span className="font-display text-xs font-bold tracking-wide text-industrial-steel-dark sm:text-sm">
+                  <span className="font-display text-xs font-bold tracking-wide text-[#d90429] sm:text-sm">
                     0{i + 1}
                   </span>
                   <h3 className="font-display text-[13px] font-medium uppercase tracking-[0.03em] text-industrial-ink sm:text-sm">

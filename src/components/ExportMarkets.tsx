@@ -36,7 +36,7 @@ export default function ExportMarkets({
             Regional Export Markets
           </h2>
           <p className="mx-auto mt-2.5 max-w-2xl text-[14px] leading-relaxed text-[#5c5c5c] sm:mt-3 sm:text-[15px] lg:text-base">
-            Supplying steel, fencing systems, and building materials to contractors and project developers across the GCC and Middle East.
+            Supplying stainless steel flexible hoses, expansion bellows, and automotive connectors to industrial plants, power stations, and OEMs across the GCC, Middle East, and global markets.
           </p>
         </Reveal>
 
